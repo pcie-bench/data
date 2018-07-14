@@ -1,0 +1,58 @@
+Machine (31GB) cpuset=0x00000fff
+  Socket L#0 cpuset=0x00000fff
+    L3 L#0 (15MB) cpuset=0x00000fff
+      L2 L#0 (256KB) cpuset=0x00000041
+        L1d L#0 (32KB) cpuset=0x00000041
+          L1i L#0 (32KB) cpuset=0x00000041
+            Core L#0 cpuset=0x00000041
+              PU L#0 (P#0) cpuset=0x00000001
+              PU L#1 (P#6) cpuset=0x00000040
+      L2 L#1 (256KB) cpuset=0x00000082
+        L1d L#1 (32KB) cpuset=0x00000082
+          L1i L#1 (32KB) cpuset=0x00000082
+            Core L#1 cpuset=0x00000082
+              PU L#2 (P#1) cpuset=0x00000002
+              PU L#3 (P#7) cpuset=0x00000080
+      L2 L#2 (256KB) cpuset=0x00000104
+        L1d L#2 (32KB) cpuset=0x00000104
+          L1i L#2 (32KB) cpuset=0x00000104
+            Core L#2 cpuset=0x00000104
+              PU L#4 (P#2) cpuset=0x00000004
+              PU L#5 (P#8) cpuset=0x00000100
+      L2 L#3 (256KB) cpuset=0x00000208
+        L1d L#3 (32KB) cpuset=0x00000208
+          L1i L#3 (32KB) cpuset=0x00000208
+            Core L#3 cpuset=0x00000208
+              PU L#6 (P#3) cpuset=0x00000008
+              PU L#7 (P#9) cpuset=0x00000200
+      L2 L#4 (256KB) cpuset=0x00000410
+        L1d L#4 (32KB) cpuset=0x00000410
+          L1i L#4 (32KB) cpuset=0x00000410
+            Core L#4 cpuset=0x00000410
+              PU L#8 (P#4) cpuset=0x00000010
+              PU L#9 (P#10) cpuset=0x00000400
+      L2 L#5 (256KB) cpuset=0x00000820
+        L1d L#5 (32KB) cpuset=0x00000820
+          L1i L#5 (32KB) cpuset=0x00000820
+            Core L#5 cpuset=0x00000820
+              PU L#10 (P#5) cpuset=0x00000020
+              PU L#11 (P#11) cpuset=0x00000800
+  HostBridge L#0
+    PCIBridge
+      PCI 19ee:6000
+    PCIBridge
+      PCI 15b3:1003
+    PCI 8086:8d62
+      Block L#0 "sda"
+    PCIBridge
+      PCIBridge
+        PCIBridge
+          PCIBridge
+            PCI 102b:0534
+    PCIBridge
+      PCI 8086:1521
+        Net L#1 "em1"
+      PCI 8086:1521
+        Net L#2 "em2"
+    PCI 8086:8d02
+      Block L#3 "sr0"

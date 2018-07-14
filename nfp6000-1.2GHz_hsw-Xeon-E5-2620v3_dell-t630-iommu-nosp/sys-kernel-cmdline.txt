@@ -1,0 +1,1 @@
+BOOT_IMAGE=kernels/vmlinuz-3.19.0-30-generic initrd=kernels/initrd.img-3.19.0-30-generic console=tty console=ttyS0,115200 ghes.disable=1 apei.disable=1 ro root=/dev/sda1 verbose single intel_iommu=on,sp_off
