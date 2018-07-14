@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-3.19.0-43-generic root=UUID=2971957c-91ed-40b7-b17b-cd0589cd45ad ro hugepagesz=1GB default_hugepagesz=1GB hugepages=8 rd_NO_LVM rd_NO_DM rhgb quiet splash vt.handoff=7

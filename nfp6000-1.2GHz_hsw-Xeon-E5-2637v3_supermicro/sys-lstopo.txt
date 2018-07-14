@@ -1,0 +1,39 @@
+Machine (63GB) cpuset=0x0000000f
+  Socket L#0 cpuset=0x0000000f
+    L3 L#0 (15MB) cpuset=0x0000000f
+      L2 L#0 (256KB) cpuset=0x00000001
+        L1d L#0 (32KB) cpuset=0x00000001
+          L1i L#0 (32KB) cpuset=0x00000001
+            Core L#0 cpuset=0x00000001
+              PU L#0 (P#0) cpuset=0x00000001
+      L2 L#1 (256KB) cpuset=0x00000002
+        L1d L#1 (32KB) cpuset=0x00000002
+          L1i L#1 (32KB) cpuset=0x00000002
+            Core L#1 cpuset=0x00000002
+              PU L#1 (P#1) cpuset=0x00000002
+      L2 L#2 (256KB) cpuset=0x00000004
+        L1d L#2 (32KB) cpuset=0x00000004
+          L1i L#2 (32KB) cpuset=0x00000004
+            Core L#2 cpuset=0x00000004
+              PU L#2 (P#2) cpuset=0x00000004
+      L2 L#3 (256KB) cpuset=0x00000008
+        L1d L#3 (32KB) cpuset=0x00000008
+          L1i L#3 (32KB) cpuset=0x00000008
+            Core L#3 cpuset=0x00000008
+              PU L#3 (P#3) cpuset=0x00000008
+  HostBridge L#0
+    PCIBridge
+      PCI 19ee:6000
+    PCI 8086:8d62
+      Block L#0 "sda"
+    PCIBridge
+      PCIBridge
+        PCI 1a03:2000
+          GPU L#1 "card0"
+          GPU L#2 "controlD64"
+    PCIBridge
+      PCI 8086:1521
+        Net L#3 "eth4"
+      PCI 8086:1521
+        Net L#4 "eth1"
+    PCI 8086:8d02
