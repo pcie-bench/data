@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-3.19.0-69-generic root=UUID=e0df4bc1-0b0e-4709-9816-5272eaa85e67 ro intel_iommu=on,sp_off

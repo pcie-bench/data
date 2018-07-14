@@ -1,0 +1,146 @@
+Machine (126GB) cpuset=0x000000ff,0xffffffff
+  NUMANode L#0 (P#0 63GB) cpuset=0x00000055,0x55555555
+    Socket L#0 cpuset=0x00000055,0x55555555
+      L3 L#0 (25MB) cpuset=0x00000055,0x55555555
+        L2 L#0 (256KB) cpuset=0x00100001
+          L1d L#0 (32KB) cpuset=0x00100001
+            L1i L#0 (32KB) cpuset=0x00100001
+              Core L#0 cpuset=0x00100001
+                PU L#0 (P#0) cpuset=0x00000001
+                PU L#1 (P#20) cpuset=0x00100000
+        L2 L#1 (256KB) cpuset=0x00400004
+          L1d L#1 (32KB) cpuset=0x00400004
+            L1i L#1 (32KB) cpuset=0x00400004
+              Core L#1 cpuset=0x00400004
+                PU L#2 (P#2) cpuset=0x00000004
+                PU L#3 (P#22) cpuset=0x00400000
+        L2 L#2 (256KB) cpuset=0x01000010
+          L1d L#2 (32KB) cpuset=0x01000010
+            L1i L#2 (32KB) cpuset=0x01000010
+              Core L#2 cpuset=0x01000010
+                PU L#4 (P#4) cpuset=0x00000010
+                PU L#5 (P#24) cpuset=0x01000000
+        L2 L#3 (256KB) cpuset=0x04000040
+          L1d L#3 (32KB) cpuset=0x04000040
+            L1i L#3 (32KB) cpuset=0x04000040
+              Core L#3 cpuset=0x04000040
+                PU L#6 (P#6) cpuset=0x00000040
+                PU L#7 (P#26) cpuset=0x04000000
+        L2 L#4 (256KB) cpuset=0x10000100
+          L1d L#4 (32KB) cpuset=0x10000100
+            L1i L#4 (32KB) cpuset=0x10000100
+              Core L#4 cpuset=0x10000100
+                PU L#8 (P#8) cpuset=0x00000100
+                PU L#9 (P#28) cpuset=0x10000000
+        L2 L#5 (256KB) cpuset=0x40000400
+          L1d L#5 (32KB) cpuset=0x40000400
+            L1i L#5 (32KB) cpuset=0x40000400
+              Core L#5 cpuset=0x40000400
+                PU L#10 (P#10) cpuset=0x00000400
+                PU L#11 (P#30) cpuset=0x40000000
+        L2 L#6 (256KB) cpuset=0x00000001,0x00001000
+          L1d L#6 (32KB) cpuset=0x00000001,0x00001000
+            L1i L#6 (32KB) cpuset=0x00000001,0x00001000
+              Core L#6 cpuset=0x00000001,0x00001000
+                PU L#12 (P#12) cpuset=0x00001000
+                PU L#13 (P#32) cpuset=0x00000001,0x0
+        L2 L#7 (256KB) cpuset=0x00000004,0x00004000
+          L1d L#7 (32KB) cpuset=0x00000004,0x00004000
+            L1i L#7 (32KB) cpuset=0x00000004,0x00004000
+              Core L#7 cpuset=0x00000004,0x00004000
+                PU L#14 (P#14) cpuset=0x00004000
+                PU L#15 (P#34) cpuset=0x00000004,0x0
+        L2 L#8 (256KB) cpuset=0x00000010,0x00010000
+          L1d L#8 (32KB) cpuset=0x00000010,0x00010000
+            L1i L#8 (32KB) cpuset=0x00000010,0x00010000
+              Core L#8 cpuset=0x00000010,0x00010000
+                PU L#16 (P#16) cpuset=0x00010000
+                PU L#17 (P#36) cpuset=0x00000010,0x0
+        L2 L#9 (256KB) cpuset=0x00000040,0x00040000
+          L1d L#9 (32KB) cpuset=0x00000040,0x00040000
+            L1i L#9 (32KB) cpuset=0x00000040,0x00040000
+              Core L#9 cpuset=0x00000040,0x00040000
+                PU L#18 (P#18) cpuset=0x00040000
+                PU L#19 (P#38) cpuset=0x00000040,0x0
+    HostBridge L#0
+      PCIBridge
+        PCI 1000:005d
+          Block L#0 "sda"
+      PCIBridge
+        PCI 19ee:6000
+      PCI 8086:8d62
+      PCIBridge
+        PCIBridge
+          PCIBridge
+            PCIBridge
+              PCI 102b:0534
+      PCIBridge
+        PCI 14e4:165f
+          Net L#1 "em1"
+        PCI 14e4:165f
+          Net L#2 "em2"
+      PCI 8086:8d02
+        Block L#3 "sr0"
+  NUMANode L#1 (P#1 63GB) cpuset=0x000000aa,0xaaaaaaaa
+    Socket L#1 cpuset=0x000000aa,0xaaaaaaaa
+      L3 L#1 (25MB) cpuset=0x000000aa,0xaaaaaaaa
+        L2 L#10 (256KB) cpuset=0x00200002
+          L1d L#10 (32KB) cpuset=0x00200002
+            L1i L#10 (32KB) cpuset=0x00200002
+              Core L#10 cpuset=0x00200002
+                PU L#20 (P#1) cpuset=0x00000002
+                PU L#21 (P#21) cpuset=0x00200000
+        L2 L#11 (256KB) cpuset=0x00800008
+          L1d L#11 (32KB) cpuset=0x00800008
+            L1i L#11 (32KB) cpuset=0x00800008
+              Core L#11 cpuset=0x00800008
+                PU L#22 (P#3) cpuset=0x00000008
+                PU L#23 (P#23) cpuset=0x00800000
+        L2 L#12 (256KB) cpuset=0x02000020
+          L1d L#12 (32KB) cpuset=0x02000020
+            L1i L#12 (32KB) cpuset=0x02000020
+              Core L#12 cpuset=0x02000020
+                PU L#24 (P#5) cpuset=0x00000020
+                PU L#25 (P#25) cpuset=0x02000000
+        L2 L#13 (256KB) cpuset=0x08000080
+          L1d L#13 (32KB) cpuset=0x08000080
+            L1i L#13 (32KB) cpuset=0x08000080
+              Core L#13 cpuset=0x08000080
+                PU L#26 (P#7) cpuset=0x00000080
+                PU L#27 (P#27) cpuset=0x08000000
+        L2 L#14 (256KB) cpuset=0x20000200
+          L1d L#14 (32KB) cpuset=0x20000200
+            L1i L#14 (32KB) cpuset=0x20000200
+              Core L#14 cpuset=0x20000200
+                PU L#28 (P#9) cpuset=0x00000200
+                PU L#29 (P#29) cpuset=0x20000000
+        L2 L#15 (256KB) cpuset=0x80000800
+          L1d L#15 (32KB) cpuset=0x80000800
+            L1i L#15 (32KB) cpuset=0x80000800
+              Core L#15 cpuset=0x80000800
+                PU L#30 (P#11) cpuset=0x00000800
+                PU L#31 (P#31) cpuset=0x80000000
+        L2 L#16 (256KB) cpuset=0x00000002,0x00002000
+          L1d L#16 (32KB) cpuset=0x00000002,0x00002000
+            L1i L#16 (32KB) cpuset=0x00000002,0x00002000
+              Core L#16 cpuset=0x00000002,0x00002000
+                PU L#32 (P#13) cpuset=0x00002000
+                PU L#33 (P#33) cpuset=0x00000002,0x0
+        L2 L#17 (256KB) cpuset=0x00000008,0x00008000
+          L1d L#17 (32KB) cpuset=0x00000008,0x00008000
+            L1i L#17 (32KB) cpuset=0x00000008,0x00008000
+              Core L#17 cpuset=0x00000008,0x00008000
+                PU L#34 (P#15) cpuset=0x00008000
+                PU L#35 (P#35) cpuset=0x00000008,0x0
+        L2 L#18 (256KB) cpuset=0x00000020,0x00020000
+          L1d L#18 (32KB) cpuset=0x00000020,0x00020000
+            L1i L#18 (32KB) cpuset=0x00000020,0x00020000
+              Core L#18 cpuset=0x00000020,0x00020000
+                PU L#36 (P#17) cpuset=0x00020000
+                PU L#37 (P#37) cpuset=0x00000020,0x0
+        L2 L#19 (256KB) cpuset=0x00000080,0x00080000
+          L1d L#19 (32KB) cpuset=0x00000080,0x00080000
+            L1i L#19 (32KB) cpuset=0x00000080,0x00080000
+              Core L#19 cpuset=0x00000080,0x00080000
+                PU L#38 (P#19) cpuset=0x00080000
+                PU L#39 (P#39) cpuset=0x00000080,0x0
