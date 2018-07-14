@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-4.4.0-31-generic root=UUID=28cf4f19-b975-4115-a4d0-d8545d03b416 ro intel_iommu=on,sp_off crashkernel=384M-:128M single

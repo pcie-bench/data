@@ -1,0 +1,39 @@
+Machine (16GB) cpuset=0x0000000f
+  Package L#0 cpuset=0x0000000f
+    L3 L#0 (8192KB) cpuset=0x0000000f
+      L2 L#0 (256KB) cpuset=0x00000001
+        L1d L#0 (32KB) cpuset=0x00000001
+          L1i L#0 (32KB) cpuset=0x00000001
+            Core L#0 cpuset=0x00000001
+              PU L#0 (P#0) cpuset=0x00000001
+      L2 L#1 (256KB) cpuset=0x00000002
+        L1d L#1 (32KB) cpuset=0x00000002
+          L1i L#1 (32KB) cpuset=0x00000002
+            Core L#1 cpuset=0x00000002
+              PU L#1 (P#1) cpuset=0x00000002
+      L2 L#2 (256KB) cpuset=0x00000004
+        L1d L#2 (32KB) cpuset=0x00000004
+          L1i L#2 (32KB) cpuset=0x00000004
+            Core L#2 cpuset=0x00000004
+              PU L#2 (P#2) cpuset=0x00000004
+      L2 L#3 (256KB) cpuset=0x00000008
+        L1d L#3 (32KB) cpuset=0x00000008
+          L1i L#3 (32KB) cpuset=0x00000008
+            Core L#3 cpuset=0x00000008
+              PU L#3 (P#3) cpuset=0x00000008
+  HostBridge L#0
+    PCIBridge
+      PCI 19ee:6000
+    PCI 8086:041a
+      GPU L#0 "card0"
+      GPU L#1 "renderD128"
+      GPU L#2 "controlD64"
+    PCI 8086:153a
+      Net L#3 "eth0"
+    PCIBridge
+      PCI 8086:1533
+        Net L#4 "p2p1"
+    PCI 8086:8c02
+      Block(Disk) L#5 "sda"
+      Block(Disk) L#6 "sdb"
+      Block(Removable Media Device) L#7 "sr0"
