@@ -1,0 +1,1918 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.19.0-30-generic (buildd@lgw01-56) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #33~14.04.1-Ubuntu SMP Tue Sep 22 09:27:00 UTC 2015 (Ubuntu 3.19.0-30.33~14.04.1-generic 3.19.8-ckt6)
+[    0.000000] Command line: BOOT_IMAGE=kernels/vmlinuz-3.19.0-30-generic initrd=kernels/initrd.img-3.19.0-30-generic console=tty console=ttyS0,115200 ghes.disable=1 apei.disable=1 ro root=/dev/sda1 verbose single intel_iommu=on
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x0000000000098fff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bd2effff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bd2f0000-0x00000000bd31bfff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000bd31c000-0x00000000bd35afff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000bd35b000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000e0000000-0x00000000efffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fe000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000083fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.7 present.
+[    0.000000] DMI: Dell Inc. PowerEdge T620/03GCPM, BIOS 2.2.2 01/16/2014
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] AGP: No AGP bridge found
+[    0.000000] e820: last_pfn = 0x840000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: uncachable
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-BFFFF uncachable
+[    0.000000]   C0000-C7FFF write-protect
+[    0.000000]   C8000-CBFFF write-back
+[    0.000000]   CC000-CFFFF write-protect
+[    0.000000]   D0000-EBFFF uncachable
+[    0.000000]   EC000-FFFFF write-protect
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 000000000000 mask 3FFF80000000 write-back
+[    0.000000]   1 base 000080000000 mask 3FFFC0000000 write-back
+[    0.000000]   2 base 000100000000 mask 3FFF00000000 write-back
+[    0.000000]   3 base 000200000000 mask 3FFE00000000 write-back
+[    0.000000]   4 base 000400000000 mask 3FFC00000000 write-back
+[    0.000000]   5 base 000800000000 mask 3FFFC0000000 write-back
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000]   8 disabled
+[    0.000000]   9 disabled
+[    0.000000] PAT configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- UC  
+[    0.000000] e820: update [mem 0xc0000000-0xffffffff] usable ==> reserved
+[    0.000000] e820: last_pfn = 0xbd2f0 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x000fe710-0x000fe71f] mapped at [ffff8800000fe710]
+[    0.000000] Scanning 1 areas for low memory corruption
+[    0.000000] Base memory trampoline at [ffff88000007d000] 7d000 size 24576
+[    0.000000] Using GB pages for direct mapping
+[    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+[    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+[    0.000000] BRK [0x01fd4000, 0x01fd4fff] PGTABLE
+[    0.000000] BRK [0x01fd5000, 0x01fd5fff] PGTABLE
+[    0.000000] BRK [0x01fd6000, 0x01fd6fff] PGTABLE
+[    0.000000] init_memory_mapping: [mem 0x83fe00000-0x83fffffff]
+[    0.000000]  [mem 0x83fe00000-0x83fffffff] page 1G
+[    0.000000] init_memory_mapping: [mem 0x820000000-0x83fdfffff]
+[    0.000000]  [mem 0x820000000-0x83fdfffff] page 1G
+[    0.000000] init_memory_mapping: [mem 0x00100000-0xbd2effff]
+[    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+[    0.000000]  [mem 0x00200000-0x3fffffff] page 2M
+[    0.000000]  [mem 0x40000000-0x7fffffff] page 1G
+[    0.000000]  [mem 0x80000000-0xbd1fffff] page 2M
+[    0.000000]  [mem 0xbd200000-0xbd2effff] page 4k
+[    0.000000] init_memory_mapping: [mem 0x100000000-0x81fffffff]
+[    0.000000]  [mem 0x100000000-0x81fffffff] page 1G
+[    0.000000] RAMDISK: [mem 0x7ecfc000-0x7fffffff]
+[    0.000000] ACPI: Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 0x00000000000F0C70 000024 (v02 DELL  )
+[    0.000000] ACPI: XSDT 0x00000000000F0DB8 0000A4 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: FACP 0x00000000BD33534C 0000F4 (v03 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: DSDT 0x00000000BD31C000 008029 (v01 DELL   PE_SC3   00000001 INTL 20110211)
+[    0.000000] ACPI: FACS 0x00000000BD337000 000040
+[    0.000000] ACPI: FACS 0x00000000BD337000 000040
+[    0.000000] ACPI: APIC 0x00000000BD334478 0001EA (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: SPCR 0x00000000BD334664 000050 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: HPET 0x00000000BD3346B8 000038 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: DMAR 0x00000000BD3346F4 000138 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: MCFG 0x00000000BD334A10 00003C (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: WD__ 0x00000000BD334A50 000134 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: SLIC 0x00000000BD334B88 000024 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: ERST 0x00000000BD3241EC 000270 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: HEST 0x00000000BD32445C 0005B0 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: BERT 0x00000000BD32402C 000030 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: EINJ 0x00000000BD32405C 000190 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: TCPA 0x00000000BD3352E4 000064 (v02 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: PC__ 0x00000000BD335274 00006E (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: SRAT 0x00000000BD334DB0 0004C0 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.000000] ACPI: SSDT 0x00000000BD338000 006124 (v01 INTEL  PPM RCM  80000001 INTL 20061109)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] SRAT: PXM 1 -> APIC 0x00 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x20 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x02 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x22 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x04 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x24 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x06 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x26 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x08 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x28 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x0a -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x2a -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x01 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x21 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x03 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x23 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x05 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x25 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x07 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x27 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x09 -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x29 -> Node 1
+[    0.000000] SRAT: PXM 1 -> APIC 0x0b -> Node 0
+[    0.000000] SRAT: PXM 2 -> APIC 0x2b -> Node 1
+[    0.000000] SRAT: Node 0 PXM 1 [mem 0x00000000-0x43fffffff]
+[    0.000000] SRAT: Node 1 PXM 2 [mem 0x440000000-0x83fffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x43fffb000-0x43fffffff]
+[    0.000000] NODE_DATA(1) allocated [mem 0x83fff9000-0x83fffdfff]
+[    0.000000]  [ffffea0000000000-ffffea0010ffffff] PMD -> [ffff88042fe00000-ffff88043fdfffff] on node 0
+[    0.000000]  [ffffea0011000000-ffffea0020ffffff] PMD -> [ffff88082f600000-ffff88083f5fffff] on node 1
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+[    0.000000]   Normal   [mem 0x100000000-0x83fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x00098fff]
+[    0.000000]   node   0: [mem 0x00100000-0xbd2effff]
+[    0.000000]   node   0: [mem 0x100000000-0x43fffffff]
+[    0.000000]   node   1: [mem 0x440000000-0x83fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00001000-0x43fffffff]
+[    0.000000] On node 0 totalpages: 4182664
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 43 pages reserved
+[    0.000000]   DMA zone: 3992 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 12044 pages used for memmap
+[    0.000000]   DMA32 zone: 770800 pages, LIFO batch:31
+[    0.000000]   Normal zone: 53248 pages used for memmap
+[    0.000000]   Normal zone: 3407872 pages, LIFO batch:31
+[    0.000000] Initmem setup node 1 [mem 0x440000000-0x83fffffff]
+[    0.000000] On node 1 totalpages: 4194304
+[    0.000000]   Normal zone: 65536 pages used for memmap
+[    0.000000]   Normal zone: 4194304 pages, LIFO batch:31
+[    0.000000] ACPI: PM-Timer IO Port: 0x808
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x02] lapic_id[0x20] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x03] lapic_id[0x02] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x04] lapic_id[0x22] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x05] lapic_id[0x04] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x06] lapic_id[0x24] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x07] lapic_id[0x06] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x08] lapic_id[0x26] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x09] lapic_id[0x08] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0a] lapic_id[0x28] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0b] lapic_id[0x0a] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0c] lapic_id[0x2a] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0d] lapic_id[0x01] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0e] lapic_id[0x21] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0f] lapic_id[0x03] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x10] lapic_id[0x23] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x11] lapic_id[0x05] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x12] lapic_id[0x25] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x13] lapic_id[0x07] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x14] lapic_id[0x27] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x15] lapic_id[0x09] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x16] lapic_id[0x29] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x17] lapic_id[0x0b] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x18] lapic_id[0x2b] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x19] lapic_id[0x58] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1a] lapic_id[0x59] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1b] lapic_id[0x5a] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1c] lapic_id[0x5b] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1d] lapic_id[0x5c] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1e] lapic_id[0x5d] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x1f] lapic_id[0x5e] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x20] lapic_id[0x5f] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x21] lapic_id[0x60] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x22] lapic_id[0x61] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x23] lapic_id[0x62] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x24] lapic_id[0x63] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x25] lapic_id[0x64] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x26] lapic_id[0x65] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x27] lapic_id[0x66] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x28] lapic_id[0x67] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x29] lapic_id[0x68] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2a] lapic_id[0x69] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2b] lapic_id[0x6a] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2c] lapic_id[0x6b] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2d] lapic_id[0x6c] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2e] lapic_id[0x6d] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x2f] lapic_id[0x6e] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x30] lapic_id[0x6f] disabled)
+[    0.000000] ACPI: LAPIC_NMI (acpi_id[0xff] high edge lint[0x1])
+[    0.000000] ACPI: IOAPIC (id[0x00] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 0, version 32, address 0xfec00000, GSI 0-23
+[    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec3f000] gsi_base[32])
+[    0.000000] IOAPIC[1]: apic_id 1, version 32, address 0xfec3f000, GSI 32-55
+[    0.000000] ACPI: IOAPIC (id[0x02] address[0xfec7f000] gsi_base[64])
+[    0.000000] IOAPIC[2]: apic_id 2, version 32, address 0xfec7f000, GSI 64-87
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a701 base: 0xfed00000
+[    0.000000] smpboot: Allowing 48 CPUs, 24 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.000000] PM: Registered nosave memory: [mem 0x00099000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbd2f0000-0xbd31bfff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbd31c000-0xbd35afff]
+[    0.000000] PM: Registered nosave memory: [mem 0xbd35b000-0xbfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xc0000000-0xdfffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xe0000000-0xefffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xf0000000-0xfdffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfe000000-0xffffffff]
+[    0.000000] e820: [mem 0xc0000000-0xdfffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on bare hardware
+[    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:48 nr_node_ids:2
+[    0.000000] PERCPU: Embedded 31 pages/cpu @ffff88042fa00000 s86144 r8192 d32640 u131072
+[    0.000000] pcpu-alloc: s86144 r8192 d32640 u131072 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 00 02 04 06 08 10 12 14 16 18 20 22 24 26 28 30 
+[    0.000000] pcpu-alloc: [0] 32 34 36 38 40 42 44 46 -- -- -- -- -- -- -- -- 
+[    0.000000] pcpu-alloc: [1] 01 03 05 07 09 11 13 15 17 19 21 23 25 27 29 31 
+[    0.000000] pcpu-alloc: [1] 33 35 37 39 41 43 45 47 -- -- -- -- -- -- -- -- 
+[    0.000000] Built 2 zonelists in Node order, mobility grouping on.  Total pages: 8246033
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=kernels/vmlinuz-3.19.0-30-generic initrd=kernels/initrd.img-3.19.0-30-generic console=tty console=ttyS0,115200 ghes.disable=1 apei.disable=1 ro root=/dev/sda1 verbose single intel_iommu=on
+[    0.000000] Intel-IOMMU: enabled
+[    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] log_buf_len total cpu_extra contributions: 192512 bytes
+[    0.000000] log_buf_len min size: 262144 bytes
+[    0.000000] log_buf_len: 524288 bytes
+[    0.000000] early log buf free: 246416(94%)
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] xsave: enabled xstate_bv 0x7, cntxt size 0x340 using standard form
+[    0.000000] AGP: Checking aperture...
+[    0.000000] AGP: No AGP bridge found
+[    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+[    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.000000] Memory: 32874784K/33507872K available (7920K kernel code, 1174K rwdata, 3756K rodata, 1408K init, 1292K bss, 633088K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=48, Nodes=2
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=48.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=48
+[    0.000000] NR_IRQS:16640 nr_irqs:1896 16
+[    0.000000] 	Offload RCU callbacks from all CPUs
+[    0.000000] 	Offload RCU callbacks from CPUs: 0-47.
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] console [ttyS0] enabled
+[    0.000000] mempolicy: Enabling automatic NUMA balancing. Configure with numa_balancing= or the kernel.numa_balancing sysctl
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2099.927 MHz processor
+[    0.000046] Calibrating delay loop (skipped), value calculated using timer frequency.. 4199.85 BogoMIPS (lpj=8399708)
+[    0.012141] pid_max: default: 49152 minimum: 384
+[    0.017419] ACPI: Core revision 20141107
+[    0.026016] ACPI: All ACPI Tables successfully acquired
+[    0.032199] Security Framework initialized
+[    0.036935] AppArmor: AppArmor initialized
+[    0.041622] Yama: becoming mindful.
+[    0.047909] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes)
+[    0.065558] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes)
+[    0.077976] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.085817] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.094568] Initializing cgroup subsys memory
+[    0.099563] Initializing cgroup subsys devices
+[    0.104641] Initializing cgroup subsys freezer
+[    0.109709] Initializing cgroup subsys net_cls
+[    0.114785] Initializing cgroup subsys blkio
+[    0.119667] Initializing cgroup subsys perf_event
+[    0.125041] Initializing cgroup subsys net_prio
+[    0.130215] Initializing cgroup subsys hugetlb
+[    0.135329] CPU: Physical Processor ID: 0
+[    0.139918] CPU: Processor Core ID: 0
+[    0.145050] mce: CPU supports 23 MCE banks
+[    0.149763] CPU0: Thermal monitoring enabled (TM1)
+[    0.155256] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 8
+[    0.155256] Last level dTLB entries: 4KB 512, 2MB 0, 4MB 0, 1GB 4
+[    0.168488] Freeing SMP alternatives memory: 32K (ffffffff81e87000 - ffffffff81e8f000)
+[    0.179733] ftrace: allocating 30022 entries in 118 pages
+[    0.202339] dmar: Host address width 46
+[    0.206739] dmar: DRHD base: 0x000000cf000000 flags: 0x0
+[    0.212791] dmar: IOMMU 0: reg_base_addr cf000000 ver 1:0 cap d2078c106f0466 ecap f020de
+[    0.221971] dmar: DRHD base: 0x000000df100000 flags: 0x1
+[    0.228023] dmar: IOMMU 1: reg_base_addr df100000 ver 1:0 cap d2078c106f0466 ecap f020de
+[    0.237203] dmar: RMRR base: 0x000000bf458000 end: 0x000000bf46ffff
+[    0.244322] dmar: RMRR base: 0x000000bf450000 end: 0x000000bf450fff
+[    0.251439] dmar: RMRR base: 0x000000bf452000 end: 0x000000bf452fff
+[    0.258555] dmar: ATSR flags: 0x0
+[    0.262489] IOAPIC id 2 under DRHD base  0xcf000000 IOMMU 0
+[    0.268821] IOAPIC id 0 under DRHD base  0xdf100000 IOMMU 1
+[    0.275152] IOAPIC id 1 under DRHD base  0xdf100000 IOMMU 1
+[    0.281483] HPET id 0 under DRHD base 0xdf100000
+[    0.286745] Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.295627] Your BIOS is broken and requested that x2apic be disabled.
+[    0.295627] This will slightly decrease performance.
+[    0.295627] Use 'intremap=no_x2apic_optout' to override BIOS request.
+[    0.316329] Enabled IRQ remapping in xapic mode
+[    0.321494] x2apic not enabled, IRQ remapping is in xapic mode
+[    0.328129] Switched APIC routing to physical flat.
+[    0.334377] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.380911] smpboot: CPU0: Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz (fam: 06, model: 3e, stepping: 04)
+[    0.391810] TSC deadline timer enabled
+[    0.391840] Performance Events: PEBS fmt1+, 16-deep LBR, IvyBridge events, full-width counters, Intel PMU driver.
+[    0.403890] ... version:                3
+[    0.408472] ... bit width:              48
+[    0.413151] ... generic registers:      4
+[    0.417734] ... value mask:             0000ffffffffffff
+[    0.423767] ... max period:             0000ffffffffffff
+[    0.429809] ... fixed-purpose events:   3
+[    0.434392] ... event mask:             000000070000000f
+[    0.441906] x86: Booting SMP configuration:
+[    0.446688] .... node  #1, CPUs:        #1
+[    0.564124] NMI watchdog: enabled on all CPUs, permanently consumes one hw-PMU counter.
+[    0.573644] 
+[    0.575406] .... node  #0, CPUs:    #2
+[    0.595292] .... node  #1, CPUs:    #3
+[    0.614010] .... node  #0, CPUs:    #4
+[    0.632796] .... node  #1, CPUs:    #5
+[    0.651589] .... node  #0, CPUs:    #6
+[    0.670387] .... node  #1, CPUs:    #7
+[    0.689112] .... node  #0, CPUs:    #8
+[    0.707908] .... node  #1, CPUs:    #9
+[    0.726640] .... node  #0, CPUs:   #10
+[    0.745429] .... node  #1, CPUs:   #11
+[    0.764156] .... node  #0, CPUs:   #12
+[    0.782961] .... node  #1, CPUs:   #13
+[    0.801692] .... node  #0, CPUs:   #14
+[    0.820483] .... node  #1, CPUs:   #15
+[    0.839211] .... node  #0, CPUs:   #16
+[    0.858000] .... node  #1, CPUs:   #17
+[    0.876722] .... node  #0, CPUs:   #18
+[    0.895518] .... node  #1, CPUs:   #19
+[    0.914248] .... node  #0, CPUs:   #20
+[    0.933034] .... node  #1, CPUs:   #21
+[    0.951765] .... node  #0, CPUs:   #22
+[    0.970554] .... node  #1, CPUs:   #23
+[    0.988855] x86: Booted up 2 nodes, 24 CPUs
+[    0.993938] smpboot: Total of 24 processors activated (100810.03 BogoMIPS)
+[    1.044905] devtmpfs: initialized
+[    1.054637] evm: security.selinux
+[    1.058445] evm: security.SMACK64
+[    1.062239] evm: security.SMACK64EXEC
+[    1.066435] evm: security.SMACK64TRANSMUTE
+[    1.071115] evm: security.SMACK64MMAP
+[    1.075309] evm: security.ima
+[    1.078724] evm: security.capability
+[    1.083293] pinctrl core: initialized pinctrl subsystem
+[    1.089373] RTC time: 11:45:45, date: 10/27/15
+[    1.095517] NET: Registered protocol family 16
+[    1.112032] cpuidle: using governor ladder
+[    1.128046] cpuidle: using governor menu
+[    1.132613] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    1.141207] ACPI: bus type PCI registered
+[    1.145791] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.153199] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0xe0000000-0xefffffff] (base 0xe0000000)
+[    1.163738] PCI: MMCONFIG at [mem 0xe0000000-0xefffffff] reserved in E820
+[    1.171866] PCI: Using configuration type 1 for base access
+[    1.178538] PCI: Dell System detected, enabling pci=bfsort.
+[    1.196965] ACPI: Added _OSI(Module Device)
+[    1.201745] ACPI: Added _OSI(Processor Device)
+[    1.206816] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.212179] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.220281] [Firmware Bug]: ACPI: BIOS _OSI(Linux) query ignored
+[    1.230085] ACPI: Interpreter enabled
+[    1.234287] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20141107/hwxface-580)
+[    1.244905] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20141107/hwxface-580)
+[    1.255521] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20141107/hwxface-580)
+[    1.266143] ACPI: (supports S0 S4 S5)
+[    1.270337] ACPI: Using IOAPIC for interrupt routing
+[    1.287077] HEST: Table parsing has been initialized.
+[    1.292831] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.308819] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-3d])
+[    1.315841] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    1.325202] acpi PNP0A08:00: PCIe AER handled by firmware
+[    1.331510] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    1.340201] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    1.350827] PCI host bridge to bus 0000:00
+[    1.355512] pci_bus 0000:00: root bus resource [bus 00-3d]
+[    1.361749] pci_bus 0000:00: root bus resource [io  0x0000-0x03af]
+[    1.368765] pci_bus 0000:00: root bus resource [io  0x03e0-0x0cf7]
+[    1.375781] pci_bus 0000:00: root bus resource [io  0x03b0-0x03df]
+[    1.382796] pci_bus 0000:00: root bus resource [io  0x0d00-0x1fff]
+[    1.389811] pci_bus 0000:00: root bus resource [io  0xe000-0xffff]
+[    1.396826] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+[    1.404620] pci_bus 0000:00: root bus resource [mem 0xd0000000-0xdfffffff]
+[    1.412415] pci_bus 0000:00: root bus resource [mem 0x3c000000000-0x3ffffffffff]
+[    1.420812] pci_bus 0000:00: root bus resource [mem 0xfed40000-0xfed44fff]
+[    1.428617] pci 0000:00:00.0: [8086:0e00] type 00 class 0x060000
+[    1.428686] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.428762] pci 0000:00:01.0: [8086:0e02] type 01 class 0x060400
+[    1.428843] pci 0000:00:01.0: PME# supported from D0 D3hot D3cold
+[    1.428924] pci 0000:00:02.0: [8086:0e04] type 01 class 0x060400
+[    1.429003] pci 0000:00:02.0: PME# supported from D0 D3hot D3cold
+[    1.429081] pci 0000:00:03.0: [8086:0e08] type 01 class 0x060400
+[    1.429162] pci 0000:00:03.0: PME# supported from D0 D3hot D3cold
+[    1.429238] pci 0000:00:05.0: [8086:0e28] type 00 class 0x088000
+[    1.429347] pci 0000:00:05.2: [8086:0e2a] type 00 class 0x088000
+[    1.429465] pci 0000:00:11.0: [8086:1d3e] type 01 class 0x060400
+[    1.429564] pci 0000:00:11.0: PME# supported from D0 D3hot D3cold
+[    1.429644] pci 0000:00:16.0: [8086:1d3a] type 00 class 0x078000
+[    1.429664] pci 0000:00:16.0: reg 0x10: [mem 0xdf0fb000-0xdf0fb00f 64bit]
+[    1.429732] pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+[    1.429799] pci 0000:00:16.1: [8086:1d3b] type 00 class 0x078000
+[    1.429819] pci 0000:00:16.1: reg 0x10: [mem 0xdf0fc000-0xdf0fc00f 64bit]
+[    1.429887] pci 0000:00:16.1: PME# supported from D0 D3hot D3cold
+[    1.429964] pci 0000:00:1a.0: [8086:1d2d] type 00 class 0x0c0320
+[    1.429986] pci 0000:00:1a.0: reg 0x10: [mem 0xdf0fd000-0xdf0fd3ff]
+[    1.430080] pci 0000:00:1a.0: PME# supported from D0 D3hot D3cold
+[    1.430146] pci 0000:00:1c.0: [8086:1d10] type 01 class 0x060400
+[    1.430232] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    1.430253] pci 0000:00:1c.0: Disabling UPDCR peer decodes
+[    1.436494] pci 0000:00:1c.0: Enabling MPC IRBNCE
+[    1.441858] pci 0000:00:1c.0: Intel PCH root port ACS workaround enabled
+[    1.449563] pci 0000:00:1c.4: [8086:1d18] type 01 class 0x060400
+[    1.449647] pci 0000:00:1c.4: PME# supported from D0 D3hot D3cold
+[    1.449669] pci 0000:00:1c.4: Enabling MPC IRBNCE
+[    1.455032] pci 0000:00:1c.4: Intel PCH root port ACS workaround enabled
+[    1.462690] pci 0000:00:1c.7: [8086:1d1e] type 01 class 0x060400
+[    1.462775] pci 0000:00:1c.7: PME# supported from D0 D3hot D3cold
+[    1.462797] pci 0000:00:1c.7: Enabling MPC IRBNCE
+[    1.468160] pci 0000:00:1c.7: Intel PCH root port ACS workaround enabled
+[    1.475818] pci 0000:00:1d.0: [8086:1d26] type 00 class 0x0c0320
+[    1.475840] pci 0000:00:1d.0: reg 0x10: [mem 0xdf0fe000-0xdf0fe3ff]
+[    1.475934] pci 0000:00:1d.0: PME# supported from D0 D3hot D3cold
+[    1.475997] pci 0000:00:1e.0: [8086:244e] type 01 class 0x060401
+[    1.476102] pci 0000:00:1f.0: [8086:1d41] type 00 class 0x060100
+[    1.476268] pci 0000:00:1f.2: [8086:1d04] type 00 class 0x010400
+[    1.476287] pci 0000:00:1f.2: reg 0x10: [io  0xfce8-0xfcef]
+[    1.476295] pci 0000:00:1f.2: reg 0x14: [io  0xfcf8-0xfcfb]
+[    1.476303] pci 0000:00:1f.2: reg 0x18: [io  0xfcf0-0xfcf7]
+[    1.476310] pci 0000:00:1f.2: reg 0x1c: [io  0xfcfc-0xfcff]
+[    1.476318] pci 0000:00:1f.2: reg 0x20: [io  0xfcc0-0xfcdf]
+[    1.476326] pci 0000:00:1f.2: reg 0x24: [mem 0xdf0ff000-0xdf0ff7ff]
+[    1.476374] pci 0000:00:1f.2: PME# supported from D3hot
+[    1.476523] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    1.482251] pci 0000:02:00.0: [8086:1583] type 00 class 0x020000
+[    1.482265] pci 0000:02:00.0: reg 0x10: [mem 0xd1000000-0xd17fffff 64bit pref]
+[    1.482280] pci 0000:02:00.0: reg 0x1c: [mem 0xd2ff0000-0xd2ff7fff 64bit pref]
+[    1.482291] pci 0000:02:00.0: reg 0x30: [mem 0xdc000000-0xdc07ffff pref]
+[    1.482339] pci 0000:02:00.0: PME# supported from D0 D3hot D3cold
+[    1.482367] pci 0000:02:00.0: reg 0x184: [mem 0xd2400000-0xd240ffff 64bit pref]
+[    1.482379] pci 0000:02:00.0: reg 0x190: [mem 0xd2d00000-0xd2d03fff 64bit pref]
+[    1.482436] pci 0000:02:00.1: [8086:1583] type 00 class 0x020000
+[    1.482449] pci 0000:02:00.1: reg 0x10: [mem 0xd1800000-0xd1ffffff 64bit pref]
+[    1.482464] pci 0000:02:00.1: reg 0x1c: [mem 0xd2ff8000-0xd2ffffff 64bit pref]
+[    1.482476] pci 0000:02:00.1: reg 0x30: [mem 0xdc000000-0xdc07ffff pref]
+[    1.482521] pci 0000:02:00.1: PME# supported from D0 D3hot D3cold
+[    1.482544] pci 0000:02:00.1: reg 0x184: [mem 0xd2800000-0xd280ffff 64bit pref]
+[    1.482556] pci 0000:02:00.1: reg 0x190: [mem 0xd2e00000-0xd2e03fff 64bit pref]
+[    1.490202] pci 0000:00:02.0: PCI bridge to [bus 02]
+[    1.495860] pci 0000:00:02.0:   bridge window [mem 0xdc000000-0xdc7fffff]
+[    1.495866] pci 0000:00:02.0:   bridge window [mem 0xd1000000-0xd2ffffff 64bit pref]
+[    1.495929] pci 0000:03:00.0: [19ee:6000] type 00 class 0x020000
+[    1.495942] pci 0000:03:00.0: reg 0x10: [mem 0x3fff8000000-0x3ffffffffff 64bit pref]
+[    1.495950] pci 0000:03:00.0: reg 0x18: [mem 0x3fff4000000-0x3fff7ffffff 64bit pref]
+[    1.495959] pci 0000:03:00.0: reg 0x20: [mem 0x3fff3000000-0x3fff3ffffff 64bit pref]
+[    1.495998] pci 0000:03:00.0: supports D1
+[    1.496000] pci 0000:03:00.0: PME# supported from D0 D1 D3hot
+[    1.496021] pci 0000:03:00.0: reg 0x224: [mem 0xdbe00000-0xdbe07fff 64bit]
+[    1.496028] pci 0000:03:00.0: reg 0x22c: [mem 0xd4000000-0xd40fffff 64bit]
+[    1.503876] pci 0000:00:03.0: PCI bridge to [bus 03]
+[    1.509527] pci 0000:00:03.0:   bridge window [mem 0xd4000000-0xdbffffff]
+[    1.509533] pci 0000:00:03.0:   bridge window [mem 0x3fff3000000-0x3ffffffffff 64bit pref]
+[    1.509599] pci 0000:00:11.0: PCI bridge to [bus 04]
+[    1.515319] pci 0000:00:1c.0: PCI bridge to [bus 05]
+[    1.521076] pci 0000:06:00.0: [8086:1521] type 00 class 0x020000
+[    1.521099] pci 0000:06:00.0: reg 0x10: [mem 0xdd500000-0xdd5fffff]
+[    1.521136] pci 0000:06:00.0: reg 0x1c: [mem 0xdd7f8000-0xdd7fbfff]
+[    1.521174] pci 0000:06:00.0: reg 0x30: [mem 0xdc800000-0xdc8fffff pref]
+[    1.521281] pci 0000:06:00.0: PME# supported from D0 D3hot D3cold
+[    1.521389] pci 0000:06:00.1: [8086:1521] type 00 class 0x020000
+[    1.521411] pci 0000:06:00.1: reg 0x10: [mem 0xdd600000-0xdd6fffff]
+[    1.521449] pci 0000:06:00.1: reg 0x1c: [mem 0xdd7fc000-0xdd7fffff]
+[    1.521487] pci 0000:06:00.1: reg 0x30: [mem 0xdc800000-0xdc8fffff pref]
+[    1.521588] pci 0000:06:00.1: PME# supported from D0 D3hot D3cold
+[    1.528999] pci 0000:00:1c.4: PCI bridge to [bus 06]
+[    1.534659] pci 0000:00:1c.4:   bridge window [mem 0xdc800000-0xdd7fffff]
+[    1.535095] pci 0000:07:00.0: [1912:0013] type 01 class 0x060400
+[    1.537690] pci 0000:07:00.0: PME# supported from D0 D3hot D3cold
+[    1.542763] pci 0000:00:1c.7: PCI bridge to [bus 07-0b]
+[    1.548713] pci 0000:00:1c.7:   bridge window [mem 0xdd800000-0xdeffffff]
+[    1.548719] pci 0000:00:1c.7:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    1.550334] pci 0000:08:00.0: [1912:0013] type 01 class 0x060400
+[    1.553314] pci 0000:08:00.0: PME# supported from D0 D3hot D3cold
+[    1.554320] pci 0000:08:01.0: [1912:0013] type 01 class 0x060400
+[    1.557427] pci 0000:08:01.0: PME# supported from D0 D3hot D3cold
+[    1.559816] pci 0000:07:00.0: PCI bridge to [bus 08-0b]
+[    1.565948] pci 0000:07:00.0:   bridge window [mem 0xdd800000-0xdeffffff]
+[    1.566073] pci 0000:07:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    1.567799] pci 0000:09:00.0: [1912:0012] type 01 class 0x060400
+[    1.571800] pci 0000:08:00.0: PCI bridge to [bus 09-0a]
+[    1.577959] pci 0000:08:00.0:   bridge window [mem 0xdd800000-0xde7fffff]
+[    1.578103] pci 0000:08:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    1.579660] pci 0000:0a:00.0: [102b:0534] type 00 class 0x030000
+[    1.580145] pci 0000:0a:00.0: reg 0x10: [mem 0xd0000000-0xd0ffffff pref]
+[    1.580405] pci 0000:0a:00.0: reg 0x14: [mem 0xde7fc000-0xde7fffff]
+[    1.580666] pci 0000:0a:00.0: reg 0x18: [mem 0xdd800000-0xddffffff]
+[    1.584765] pci 0000:09:00.0: PCI bridge to [bus 0a]
+[    1.590632] pci 0000:09:00.0:   bridge window [mem 0xdd800000-0xde7fffff]
+[    1.590776] pci 0000:09:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    1.592459] pci 0000:08:01.0: PCI bridge to [bus 0b]
+[    1.598325] pci 0000:08:01.0:   bridge window [mem 0xdef00000-0xdeffffff]
+[    1.599510] pci 0000:00:1e.0: PCI bridge to [bus 0c] (subtractive decode)
+[    1.607214] pci 0000:00:1e.0:   bridge window [io  0x0000-0x03af] (subtractive decode)
+[    1.607216] pci 0000:00:1e.0:   bridge window [io  0x03e0-0x0cf7] (subtractive decode)
+[    1.607218] pci 0000:00:1e.0:   bridge window [io  0x03b0-0x03df] (subtractive decode)
+[    1.607219] pci 0000:00:1e.0:   bridge window [io  0x0d00-0x1fff] (subtractive decode)
+[    1.607221] pci 0000:00:1e.0:   bridge window [io  0xe000-0xffff] (subtractive decode)
+[    1.607223] pci 0000:00:1e.0:   bridge window [mem 0x000a0000-0x000bffff] (subtractive decode)
+[    1.607225] pci 0000:00:1e.0:   bridge window [mem 0xd0000000-0xdfffffff] (subtractive decode)
+[    1.607227] pci 0000:00:1e.0:   bridge window [mem 0x3c000000000-0x3ffffffffff] (subtractive decode)
+[    1.607228] pci 0000:00:1e.0:   bridge window [mem 0xfed40000-0xfed44fff] (subtractive decode)
+[    1.607520] pci_bus 0000:00: on NUMA node 0
+[    1.608835] ACPI: PCI Root Bridge [PCI1] (domain 0000 [bus 40-7e])
+[    1.615856] acpi PNP0A08:01: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    1.625216] acpi PNP0A08:01: PCIe AER handled by firmware
+[    1.631521] acpi PNP0A08:01: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    1.640210] acpi PNP0A08:01: FADT indicates ASPM is unsupported, using BIOS configuration
+[    1.650875] PCI host bridge to bus 0000:40
+[    1.655560] pci_bus 0000:40: root bus resource [bus 40-7e]
+[    1.661798] pci_bus 0000:40: root bus resource [io  0x2000-0x3fff]
+[    1.668814] pci_bus 0000:40: root bus resource [io  0x4000-0x5fff]
+[    1.675829] pci_bus 0000:40: root bus resource [io  0x6000-0x7fff]
+[    1.682845] pci_bus 0000:40: root bus resource [io  0x8000-0x9fff]
+[    1.689861] pci_bus 0000:40: root bus resource [io  0xa000-0xbfff]
+[    1.696876] pci_bus 0000:40: root bus resource [io  0xc000-0xdfff]
+[    1.703889] pci_bus 0000:40: root bus resource [mem 0xcc000000-0xcfffffff]
+[    1.711681] pci_bus 0000:40: root bus resource [mem 0x38000000000-0x3bfffffffff]
+[    1.720091] pci 0000:40:01.0: [8086:0e02] type 01 class 0x060400
+[    1.720180] pci 0000:40:01.0: PME# supported from D0 D3hot D3cold
+[    1.720259] pci 0000:40:02.0: [8086:0e04] type 01 class 0x060400
+[    1.720345] pci 0000:40:02.0: PME# supported from D0 D3hot D3cold
+[    1.720417] pci 0000:40:03.0: [8086:0e08] type 01 class 0x060400
+[    1.720504] pci 0000:40:03.0: PME# supported from D0 D3hot D3cold
+[    1.720575] pci 0000:40:05.0: [8086:0e28] type 00 class 0x088000
+[    1.720684] pci 0000:40:05.2: [8086:0e2a] type 00 class 0x088000
+[    1.720858] pci 0000:41:00.0: [19ee:3200] type 00 class 0x020000
+[    1.720872] pci 0000:41:00.0: reg 0x10: [mem 0xcc000000-0xccffffff 64bit]
+[    1.720881] pci 0000:41:00.0: reg 0x18: [mem 0xcd000000-0xcdffffff 64bit]
+[    1.720891] pci 0000:41:00.0: reg 0x20: [mem 0xce000000-0xceffffff 64bit]
+[    1.728100] pci 0000:40:01.0: PCI bridge to [bus 41]
+[    1.733759] pci 0000:40:01.0:   bridge window [mem 0xcc000000-0xceffffff]
+[    1.733822] pci 0000:40:02.0: PCI bridge to [bus 42]
+[    1.739534] pci 0000:40:03.0: PCI bridge to [bus 43]
+[    1.745218] pci_bus 0000:40: on NUMA node 1
+[    1.745288] ACPI: PCI Root Bridge [P0B1] (domain 0000 [bus 3f])
+[    1.752017] acpi PNP0A08:02: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    1.761379] acpi PNP0A08:02: PCIe AER handled by firmware
+[    1.767674] acpi PNP0A08:02: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    1.776365] acpi PNP0A08:02: FADT indicates ASPM is unsupported, using BIOS configuration
+[    1.785708] PCI host bridge to bus 0000:3f
+[    1.790390] pci_bus 0000:3f: root bus resource [bus 3f]
+[    1.796342] pci 0000:3f:08.0: [8086:0e80] type 00 class 0x088000
+[    1.796410] pci 0000:3f:09.0: [8086:0e90] type 00 class 0x088000
+[    1.796470] pci 0000:3f:0a.0: [8086:0ec0] type 00 class 0x088000
+[    1.796523] pci 0000:3f:0a.1: [8086:0ec1] type 00 class 0x088000
+[    1.796575] pci 0000:3f:0a.2: [8086:0ec2] type 00 class 0x088000
+[    1.796628] pci 0000:3f:0a.3: [8086:0ec3] type 00 class 0x088000
+[    1.796683] pci 0000:3f:0b.0: [8086:0e1e] type 00 class 0x088000
+[    1.796736] pci 0000:3f:0b.3: [8086:0e1f] type 00 class 0x088000
+[    1.796792] pci 0000:3f:0c.0: [8086:0ee0] type 00 class 0x088000
+[    1.796843] pci 0000:3f:0c.1: [8086:0ee2] type 00 class 0x088000
+[    1.796897] pci 0000:3f:0c.2: [8086:0ee4] type 00 class 0x088000
+[    1.796950] pci 0000:3f:0d.0: [8086:0ee1] type 00 class 0x088000
+[    1.797002] pci 0000:3f:0d.1: [8086:0ee3] type 00 class 0x088000
+[    1.797052] pci 0000:3f:0d.2: [8086:0ee5] type 00 class 0x088000
+[    1.797108] pci 0000:3f:0e.0: [8086:0ea0] type 00 class 0x088000
+[    1.797163] pci 0000:3f:0e.1: [8086:0e30] type 00 class 0x110100
+[    1.797224] pci 0000:3f:0f.0: [8086:0ea8] type 00 class 0x088000
+[    1.797291] pci 0000:3f:0f.1: [8086:0e71] type 00 class 0x088000
+[    1.797357] pci 0000:3f:0f.2: [8086:0eaa] type 00 class 0x088000
+[    1.797423] pci 0000:3f:0f.3: [8086:0eab] type 00 class 0x088000
+[    1.797489] pci 0000:3f:0f.4: [8086:0eac] type 00 class 0x088000
+[    1.797555] pci 0000:3f:0f.5: [8086:0ead] type 00 class 0x088000
+[    1.797624] pci 0000:3f:10.0: [8086:0eb0] type 00 class 0x088000
+[    1.797693] pci 0000:3f:10.1: [8086:0eb1] type 00 class 0x088000
+[    1.797760] pci 0000:3f:10.2: [8086:0eb2] type 00 class 0x088000
+[    1.797826] pci 0000:3f:10.3: [8086:0eb3] type 00 class 0x088000
+[    1.797892] pci 0000:3f:10.4: [8086:0eb4] type 00 class 0x088000
+[    1.797959] pci 0000:3f:10.5: [8086:0eb5] type 00 class 0x088000
+[    1.798026] pci 0000:3f:10.7: [8086:0eb7] type 00 class 0x088000
+[    1.798093] pci 0000:3f:13.0: [8086:0e1d] type 00 class 0x088000
+[    1.798146] pci 0000:3f:13.1: [8086:0e34] type 00 class 0x110100
+[    1.798200] pci 0000:3f:13.4: [8086:0e81] type 00 class 0x088000
+[    1.798252] pci 0000:3f:13.5: [8086:0e36] type 00 class 0x110100
+[    1.798308] pci 0000:3f:16.0: [8086:0ec8] type 00 class 0x088000
+[    1.798359] pci 0000:3f:16.1: [8086:0ec9] type 00 class 0x088000
+[    1.798411] pci 0000:3f:16.2: [8086:0eca] type 00 class 0x088000
+[    1.798472] pci_bus 0000:3f: on NUMA node 0
+[    1.798529] ACPI: PCI Root Bridge [P1B1] (domain 0000 [bus 7f])
+[    1.805256] acpi PNP0A08:03: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+[    1.814608] acpi PNP0A08:03: PCIe AER handled by firmware
+[    1.820912] acpi PNP0A08:03: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    1.829603] acpi PNP0A08:03: FADT indicates ASPM is unsupported, using BIOS configuration
+[    1.838923] PCI host bridge to bus 0000:7f
+[    1.843606] pci_bus 0000:7f: root bus resource [bus 7f]
+[    1.849560] pci 0000:7f:08.0: [8086:0e80] type 00 class 0x088000
+[    1.849626] pci 0000:7f:09.0: [8086:0e90] type 00 class 0x088000
+[    1.849687] pci 0000:7f:0a.0: [8086:0ec0] type 00 class 0x088000
+[    1.849740] pci 0000:7f:0a.1: [8086:0ec1] type 00 class 0x088000
+[    1.849792] pci 0000:7f:0a.2: [8086:0ec2] type 00 class 0x088000
+[    1.849846] pci 0000:7f:0a.3: [8086:0ec3] type 00 class 0x088000
+[    1.849900] pci 0000:7f:0b.0: [8086:0e1e] type 00 class 0x088000
+[    1.849952] pci 0000:7f:0b.3: [8086:0e1f] type 00 class 0x088000
+[    1.850004] pci 0000:7f:0c.0: [8086:0ee0] type 00 class 0x088000
+[    1.850055] pci 0000:7f:0c.1: [8086:0ee2] type 00 class 0x088000
+[    1.850107] pci 0000:7f:0c.2: [8086:0ee4] type 00 class 0x088000
+[    1.850161] pci 0000:7f:0d.0: [8086:0ee1] type 00 class 0x088000
+[    1.850211] pci 0000:7f:0d.1: [8086:0ee3] type 00 class 0x088000
+[    1.850262] pci 0000:7f:0d.2: [8086:0ee5] type 00 class 0x088000
+[    1.850316] pci 0000:7f:0e.0: [8086:0ea0] type 00 class 0x088000
+[    1.850371] pci 0000:7f:0e.1: [8086:0e30] type 00 class 0x110100
+[    1.850435] pci 0000:7f:0f.0: [8086:0ea8] type 00 class 0x088000
+[    1.850503] pci 0000:7f:0f.1: [8086:0e71] type 00 class 0x088000
+[    1.850572] pci 0000:7f:0f.2: [8086:0eaa] type 00 class 0x088000
+[    1.850640] pci 0000:7f:0f.3: [8086:0eab] type 00 class 0x088000
+[    1.850709] pci 0000:7f:0f.4: [8086:0eac] type 00 class 0x088000
+[    1.850777] pci 0000:7f:0f.5: [8086:0ead] type 00 class 0x088000
+[    1.850846] pci 0000:7f:10.0: [8086:0eb0] type 00 class 0x088000
+[    1.850915] pci 0000:7f:10.1: [8086:0eb1] type 00 class 0x088000
+[    1.850983] pci 0000:7f:10.2: [8086:0eb2] type 00 class 0x088000
+[    1.851051] pci 0000:7f:10.3: [8086:0eb3] type 00 class 0x088000
+[    1.851121] pci 0000:7f:10.4: [8086:0eb4] type 00 class 0x088000
+[    1.851189] pci 0000:7f:10.5: [8086:0eb5] type 00 class 0x088000
+[    1.851258] pci 0000:7f:10.7: [8086:0eb7] type 00 class 0x088000
+[    1.851326] pci 0000:7f:13.0: [8086:0e1d] type 00 class 0x088000
+[    1.851378] pci 0000:7f:13.1: [8086:0e34] type 00 class 0x110100
+[    1.851431] pci 0000:7f:13.4: [8086:0e81] type 00 class 0x088000
+[    1.851484] pci 0000:7f:13.5: [8086:0e36] type 00 class 0x110100
+[    1.851541] pci 0000:7f:16.0: [8086:0ec8] type 00 class 0x088000
+[    1.851593] pci 0000:7f:16.1: [8086:0ec9] type 00 class 0x088000
+[    1.851645] pci 0000:7f:16.2: [8086:0eca] type 00 class 0x088000
+[    1.851707] pci_bus 0000:7f: on NUMA node 1
+[    1.851873] ACPI: PCI Interrupt Link [LK00] (IRQs 3 4 5 6 7 11 14 *15)
+[    1.860206] ACPI: PCI Interrupt Link [LK01] (IRQs 3 4 5 6 7 11 *14 15)
+[    1.868534] ACPI: PCI Interrupt Link [LK02] (IRQs 3 4 5 6 7 11 14 15) *0, disabled.
+[    1.878320] ACPI: PCI Interrupt Link [LK03] (IRQs 3 4 5 6 7 *11 14 15)
+[    1.886643] ACPI: PCI Interrupt Link [LK04] (IRQs 3 4 *5 6 7 11 14 15)
+[    1.894968] ACPI: PCI Interrupt Link [LK05] (IRQs 3 4 5 6 7 11 14 15) *0, disabled.
+[    1.904750] ACPI: PCI Interrupt Link [LK06] (IRQs 3 4 5 *6 7 11 14 15)
+[    1.913076] ACPI: PCI Interrupt Link [LK07] (IRQs 3 4 5 6 7 11 *14 15)
+[    1.921423] ACPI: Enabled 3 GPEs in block 00 to 3F
+[    1.927673] vgaarb: setting as boot device: PCI:0000:0a:00.0
+[    1.934143] vgaarb: device added: PCI:0000:0a:00.0,decodes=io+mem,owns=io+mem,locks=none
+[    1.943349] vgaarb: loaded
+[    1.946475] vgaarb: bridge control possible 0000:0a:00.0
+[    1.952854] SCSI subsystem initialized
+[    1.957250] libata version 3.00 loaded.
+[    1.957280] ACPI: bus type USB registered
+[    1.961890] usbcore: registered new interface driver usbfs
+[    1.968138] usbcore: registered new interface driver hub
+[    1.974273] usbcore: registered new device driver usb
+[    1.980299] PCI: Using ACPI for IRQ routing
+[    1.990834] PCI: pci_cache_line_size set to 64 bytes
+[    1.991341] e820: reserve RAM buffer [mem 0x00099000-0x0009ffff]
+[    1.991343] e820: reserve RAM buffer [mem 0xbd2f0000-0xbfffffff]
+[    1.991550] NetLabel: Initializing
+[    1.995457] NetLabel:  domain hash size = 128
+[    2.000432] NetLabel:  protocols = UNLABELED CIPSOv4
+[    2.006100] NetLabel:  unlabeled traffic allowed by default
+[    2.012533] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    2.020356] hpet0: 8 comparators, 64-bit 14.318180 MHz counter
+[    2.029077] Switched to clocksource hpet
+[    2.040504] AppArmor: AppArmor Filesystem Enabled
+[    2.045938] pnp: PnP ACPI init
+[    2.049703] system 00:00: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    2.049759] pnp 00:01: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    2.049955] pnp 00:02: Plug and Play ACPI device, IDs PNP0501 (active)
+[    2.050133] pnp 00:03: Plug and Play ACPI device, IDs PNP0501 (active)
+[    2.050495] system 00:04: [io  0x0800-0x087f] could not be reserved
+[    2.057618] system 00:04: [io  0x0880-0x08ff] has been reserved
+[    2.064346] system 00:04: [io  0x0900-0x091f] has been reserved
+[    2.071076] system 00:04: [io  0x0920-0x0923] has been reserved
+[    2.077805] system 00:04: [io  0x0924] has been reserved
+[    2.083852] system 00:04: [io  0x0370-0x0377] has been reserved
+[    2.090664] system 00:04: [io  0x0ca0-0x0ca7] has been reserved
+[    2.097391] system 00:04: [io  0x0ca9-0x0cab] has been reserved
+[    2.104110] system 00:04: [io  0x0cad-0x0caf] has been reserved
+[    2.110838] system 00:04: [io  0x0cb0-0x0cbf] has been reserved
+[    2.117568] system 00:04: Plug and Play ACPI device, IDs PNP0c01 (active)
+[    2.117659] system 00:05: [io  0x0ca8] has been reserved
+[    2.123710] system 00:05: [io  0x0cac] has been reserved
+[    2.129757] system 00:05: Plug and Play ACPI device, IDs IPI0001 PNP0c01 (active)
+[    2.130134] system 00:06: [mem 0xe0000000-0xe3efffff] has been reserved
+[    2.137645] system 00:06: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    2.137811] system 00:07: [mem 0xe4000000-0xe7ffffff] has been reserved
+[    2.145313] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    2.145386] system 00:08: [mem 0xe3f00000-0xe3ffffff] has been reserved
+[    2.152896] system 00:08: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    2.152976] system 00:09: [mem 0xdf100000-0xdf101fff] could not be reserved
+[    2.160866] system 00:09: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    2.160963] system 00:0a: [mem 0xcf000000-0xcf001fff] could not be reserved
+[    2.168862] system 00:0a: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    2.169012] pnp: PnP ACPI: found 11 devices
+[    2.180358] pci 0000:02:00.1: can't claim BAR 6 [mem 0xdc000000-0xdc07ffff pref]: address conflict with 0000:02:00.0 [mem 0xdc000000-0xdc07ffff pref]
+[    2.195475] pci 0000:06:00.1: can't claim BAR 6 [mem 0xdc800000-0xdc8fffff pref]: address conflict with 0000:06:00.0 [mem 0xdc800000-0xdc8fffff pref]
+[    2.211581] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    2.217252] pci 0000:02:00.1: BAR 6: assigned [mem 0xdc080000-0xdc0fffff pref]
+[    2.225462] pci 0000:00:02.0: PCI bridge to [bus 02]
+[    2.231122] pci 0000:00:02.0:   bridge window [mem 0xdc000000-0xdc7fffff]
+[    2.238825] pci 0000:00:02.0:   bridge window [mem 0xd1000000-0xd2ffffff 64bit pref]
+[    2.247621] pci 0000:00:03.0: PCI bridge to [bus 03]
+[    2.253283] pci 0000:00:03.0:   bridge window [mem 0xd4000000-0xdbffffff]
+[    2.260986] pci 0000:00:03.0:   bridge window [mem 0x3fff3000000-0x3ffffffffff 64bit pref]
+[    2.270366] pci 0000:00:11.0: PCI bridge to [bus 04]
+[    2.276035] pci 0000:00:1c.0: PCI bridge to [bus 05]
+[    2.281704] pci 0000:06:00.1: BAR 6: assigned [mem 0xdc900000-0xdc9fffff pref]
+[    2.289912] pci 0000:00:1c.4: PCI bridge to [bus 06]
+[    2.295574] pci 0000:00:1c.4:   bridge window [mem 0xdc800000-0xdd7fffff]
+[    2.303281] pci 0000:09:00.0: PCI bridge to [bus 0a]
+[    2.309079] pci 0000:09:00.0:   bridge window [mem 0xdd800000-0xde7fffff]
+[    2.316870] pci 0000:09:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.325852] pci 0000:08:00.0: PCI bridge to [bus 09-0a]
+[    2.331943] pci 0000:08:00.0:   bridge window [mem 0xdd800000-0xde7fffff]
+[    2.339733] pci 0000:08:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.348715] pci 0000:08:01.0: PCI bridge to [bus 0b]
+[    2.354507] pci 0000:08:01.0:   bridge window [mem 0xdef00000-0xdeffffff]
+[    2.362553] pci 0000:07:00.0: PCI bridge to [bus 08-0b]
+[    2.368630] pci 0000:07:00.0:   bridge window [mem 0xdd800000-0xdeffffff]
+[    2.376410] pci 0000:07:00.0:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.385441] pci 0000:00:1c.7: PCI bridge to [bus 07-0b]
+[    2.391395] pci 0000:00:1c.7:   bridge window [mem 0xdd800000-0xdeffffff]
+[    2.399098] pci 0000:00:1c.7:   bridge window [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.407894] pci 0000:00:1e.0: PCI bridge to [bus 0c]
+[    2.413562] pci_bus 0000:00: resource 4 [io  0x0000-0x03af]
+[    2.413564] pci_bus 0000:00: resource 5 [io  0x03e0-0x0cf7]
+[    2.413566] pci_bus 0000:00: resource 6 [io  0x03b0-0x03df]
+[    2.413568] pci_bus 0000:00: resource 7 [io  0x0d00-0x1fff]
+[    2.413569] pci_bus 0000:00: resource 8 [io  0xe000-0xffff]
+[    2.413571] pci_bus 0000:00: resource 9 [mem 0x000a0000-0x000bffff]
+[    2.413573] pci_bus 0000:00: resource 10 [mem 0xd0000000-0xdfffffff]
+[    2.413575] pci_bus 0000:00: resource 11 [mem 0x3c000000000-0x3ffffffffff]
+[    2.413577] pci_bus 0000:00: resource 12 [mem 0xfed40000-0xfed44fff]
+[    2.413579] pci_bus 0000:02: resource 1 [mem 0xdc000000-0xdc7fffff]
+[    2.413581] pci_bus 0000:02: resource 2 [mem 0xd1000000-0xd2ffffff 64bit pref]
+[    2.413582] pci_bus 0000:03: resource 1 [mem 0xd4000000-0xdbffffff]
+[    2.413584] pci_bus 0000:03: resource 2 [mem 0x3fff3000000-0x3ffffffffff 64bit pref]
+[    2.413586] pci_bus 0000:06: resource 1 [mem 0xdc800000-0xdd7fffff]
+[    2.413588] pci_bus 0000:07: resource 1 [mem 0xdd800000-0xdeffffff]
+[    2.413590] pci_bus 0000:07: resource 2 [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.413592] pci_bus 0000:08: resource 1 [mem 0xdd800000-0xdeffffff]
+[    2.413594] pci_bus 0000:08: resource 2 [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.413596] pci_bus 0000:09: resource 1 [mem 0xdd800000-0xde7fffff]
+[    2.413597] pci_bus 0000:09: resource 2 [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.413599] pci_bus 0000:0a: resource 1 [mem 0xdd800000-0xde7fffff]
+[    2.413601] pci_bus 0000:0a: resource 2 [mem 0xd0000000-0xd0ffffff 64bit pref]
+[    2.413603] pci_bus 0000:0b: resource 1 [mem 0xdef00000-0xdeffffff]
+[    2.413605] pci_bus 0000:0c: resource 4 [io  0x0000-0x03af]
+[    2.413606] pci_bus 0000:0c: resource 5 [io  0x03e0-0x0cf7]
+[    2.413608] pci_bus 0000:0c: resource 6 [io  0x03b0-0x03df]
+[    2.413610] pci_bus 0000:0c: resource 7 [io  0x0d00-0x1fff]
+[    2.413611] pci_bus 0000:0c: resource 8 [io  0xe000-0xffff]
+[    2.413613] pci_bus 0000:0c: resource 9 [mem 0x000a0000-0x000bffff]
+[    2.413615] pci_bus 0000:0c: resource 10 [mem 0xd0000000-0xdfffffff]
+[    2.413617] pci_bus 0000:0c: resource 11 [mem 0x3c000000000-0x3ffffffffff]
+[    2.413618] pci_bus 0000:0c: resource 12 [mem 0xfed40000-0xfed44fff]
+[    2.413637] pci 0000:40:01.0: PCI bridge to [bus 41]
+[    2.419298] pci 0000:40:01.0:   bridge window [mem 0xcc000000-0xceffffff]
+[    2.427003] pci 0000:40:02.0: PCI bridge to [bus 42]
+[    2.432661] pci 0000:40:03.0: PCI bridge to [bus 43]
+[    2.438327] pci_bus 0000:40: resource 4 [io  0x2000-0x3fff]
+[    2.438329] pci_bus 0000:40: resource 5 [io  0x4000-0x5fff]
+[    2.438330] pci_bus 0000:40: resource 6 [io  0x6000-0x7fff]
+[    2.438332] pci_bus 0000:40: resource 7 [io  0x8000-0x9fff]
+[    2.438334] pci_bus 0000:40: resource 8 [io  0xa000-0xbfff]
+[    2.438335] pci_bus 0000:40: resource 9 [io  0xc000-0xdfff]
+[    2.438337] pci_bus 0000:40: resource 10 [mem 0xcc000000-0xcfffffff]
+[    2.438339] pci_bus 0000:40: resource 11 [mem 0x38000000000-0x3bfffffffff]
+[    2.438341] pci_bus 0000:41: resource 1 [mem 0xcc000000-0xceffffff]
+[    2.438400] NET: Registered protocol family 2
+[    2.443897] TCP established hash table entries: 262144 (order: 9, 2097152 bytes)
+[    2.464016] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    2.471785] TCP: Hash tables configured (established 262144 bind 65536)
+[    2.479328] TCP: reno registered
+[    2.483089] UDP hash table entries: 16384 (order: 7, 524288 bytes)
+[    2.490232] UDP-Lite hash table entries: 16384 (order: 7, 524288 bytes)
+[    2.498008] NET: Registered protocol family 1
+[    2.518237] pci 0000:0a:00.0: Video device with shadowed ROM
+[    2.518377] PCI: CLS 64 bytes, default 64
+[    2.518441] Trying to unpack rootfs image as initramfs...
+[    2.882423] Freeing initrd memory: 19472K (ffff88007ecfc000 - ffff880080000000)
+[    2.891451] IOMMU: dmar0 using Queued invalidation
+[    2.896912] IOMMU: dmar1 using Queued invalidation
+[    2.902379] IOMMU: Setting RMRR:
+[    2.906107] IOMMU: Setting identity map for device 0000:00:1d.0 [0xbf452000 - 0xbf452fff]
+[    2.915425] IOMMU: Setting identity map for device 0000:00:1a.0 [0xbf450000 - 0xbf450fff]
+[    2.924724] IOMMU: Setting identity map for device 0000:00:1a.0 [0xbf458000 - 0xbf46ffff]
+[    2.934005] IOMMU: Setting identity map for device 0000:00:1d.0 [0xbf458000 - 0xbf46ffff]
+[    2.943287] IOMMU: Prepare 0-16MiB unity mapping for LPC
+[    2.949345] IOMMU: Setting identity map for device 0000:00:1f.0 [0x0 - 0xffffff]
+[    2.957781] PCI-DMA: Intel(R) Virtualization Technology for Directed I/O
+[    2.971918] RAPL PMU detected, hw unit 2^-16 Joules, API unit is 2^-32 Joules, 3 fixed counters 163840 ms ovfl timer
+[    2.984867] microcode: CPU0 sig=0x306e4, pf=0x1, revision=0x416
+[    2.991598] microcode: CPU1 sig=0x306e4, pf=0x1, revision=0x416
+[    2.998332] microcode: CPU2 sig=0x306e4, pf=0x1, revision=0x416
+[    3.005068] microcode: CPU3 sig=0x306e4, pf=0x1, revision=0x416
+[    3.011803] microcode: CPU4 sig=0x306e4, pf=0x1, revision=0x416
+[    3.018535] microcode: CPU5 sig=0x306e4, pf=0x1, revision=0x416
+[    3.025268] microcode: CPU6 sig=0x306e4, pf=0x1, revision=0x416
+[    3.032000] microcode: CPU7 sig=0x306e4, pf=0x1, revision=0x416
+[    3.038734] microcode: CPU8 sig=0x306e4, pf=0x1, revision=0x416
+[    3.045464] microcode: CPU9 sig=0x306e4, pf=0x1, revision=0x416
+[    3.052198] microcode: CPU10 sig=0x306e4, pf=0x1, revision=0x416
+[    3.059027] microcode: CPU11 sig=0x306e4, pf=0x1, revision=0x416
+[    3.065856] microcode: CPU12 sig=0x306e4, pf=0x1, revision=0x416
+[    3.072682] microcode: CPU13 sig=0x306e4, pf=0x1, revision=0x416
+[    3.079512] microcode: CPU14 sig=0x306e4, pf=0x1, revision=0x416
+[    3.086342] microcode: CPU15 sig=0x306e4, pf=0x1, revision=0x416
+[    3.093170] microcode: CPU16 sig=0x306e4, pf=0x1, revision=0x416
+[    3.099999] microcode: CPU17 sig=0x306e4, pf=0x1, revision=0x416
+[    3.106828] microcode: CPU18 sig=0x306e4, pf=0x1, revision=0x416
+[    3.113654] microcode: CPU19 sig=0x306e4, pf=0x1, revision=0x416
+[    3.120483] microcode: CPU20 sig=0x306e4, pf=0x1, revision=0x416
+[    3.127309] microcode: CPU21 sig=0x306e4, pf=0x1, revision=0x416
+[    3.134138] microcode: CPU22 sig=0x306e4, pf=0x1, revision=0x416
+[    3.140964] microcode: CPU23 sig=0x306e4, pf=0x1, revision=0x416
+[    3.147859] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    3.157864] Scanning for low memory corruption every 60 seconds
+[    3.165558] futex hash table entries: 16384 (order: 8, 1048576 bytes)
+[    3.173051] Initialise system trusted keyring
+[    3.178071] audit: initializing netlink subsys (disabled)
+[    3.184237] audit: type=2000 audit(1445946344.560:1): initialized
+[    3.191880] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    3.200630] zpool: loaded
+[    3.203666] zbud: loaded
+[    3.206804] VFS: Disk quotas dquot_6.5.2
+[    3.211354] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    3.219781] fuse init (API version 7.23)
+[    3.224452] Key type big_key registered
+[    3.229398] Key type asymmetric registered
+[    3.234087] Asymmetric key parser 'x509' registered
+[    3.239696] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    3.248206] io scheduler noop registered
+[    3.252700] io scheduler deadline registered (default)
+[    3.258588] io scheduler cfq registered
+[    3.269451] pcieport 0000:00:01.0: Signaling PME through PCIe PME interrupt
+[    3.277351] pcie_pme 0000:00:01.0:pcie01: service driver pcie_pme loaded
+[    3.277368] pcieport 0000:00:02.0: Signaling PME through PCIe PME interrupt
+[    3.285261] pci 0000:02:00.0: Signaling PME through PCIe PME interrupt
+[    3.292666] pci 0000:02:00.1: Signaling PME through PCIe PME interrupt
+[    3.300074] pcie_pme 0000:00:02.0:pcie01: service driver pcie_pme loaded
+[    3.300093] pcieport 0000:00:03.0: Signaling PME through PCIe PME interrupt
+[    3.307983] pci 0000:03:00.0: Signaling PME through PCIe PME interrupt
+[    3.315392] pcie_pme 0000:00:03.0:pcie01: service driver pcie_pme loaded
+[    3.315409] pcieport 0000:00:11.0: Signaling PME through PCIe PME interrupt
+[    3.323305] pcie_pme 0000:00:11.0:pcie01: service driver pcie_pme loaded
+[    3.323322] pcieport 0000:00:1c.0: Signaling PME through PCIe PME interrupt
+[    3.331215] pcie_pme 0000:00:1c.0:pcie01: service driver pcie_pme loaded
+[    3.331234] pcieport 0000:00:1c.4: Signaling PME through PCIe PME interrupt
+[    3.339125] pci 0000:06:00.0: Signaling PME through PCIe PME interrupt
+[    3.346531] pci 0000:06:00.1: Signaling PME through PCIe PME interrupt
+[    3.353938] pcie_pme 0000:00:1c.4:pcie01: service driver pcie_pme loaded
+[    3.353953] pcieport 0000:00:1c.7: Signaling PME through PCIe PME interrupt
+[    3.361846] pcieport 0000:07:00.0: Signaling PME through PCIe PME interrupt
+[    3.369738] pcieport 0000:08:00.0: Signaling PME through PCIe PME interrupt
+[    3.377630] pci 0000:09:00.0: Signaling PME through PCIe PME interrupt
+[    3.385035] pci 0000:0a:00.0: Signaling PME through PCIe PME interrupt
+[    3.392440] pcieport 0000:08:01.0: Signaling PME through PCIe PME interrupt
+[    3.400335] pcie_pme 0000:00:1c.7:pcie01: service driver pcie_pme loaded
+[    3.400355] pcieport 0000:40:01.0: Signaling PME through PCIe PME interrupt
+[    3.408248] pci 0000:41:00.0: Signaling PME through PCIe PME interrupt
+[    3.415748] pcie_pme 0000:40:01.0:pcie01: service driver pcie_pme loaded
+[    3.415766] pcieport 0000:40:02.0: Signaling PME through PCIe PME interrupt
+[    3.423661] pcie_pme 0000:40:02.0:pcie01: service driver pcie_pme loaded
+[    3.423678] pcieport 0000:40:03.0: Signaling PME through PCIe PME interrupt
+[    3.431571] pcie_pme 0000:40:03.0:pcie01: service driver pcie_pme loaded
+[    3.431580] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    3.437932] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    3.445497] intel_idle: does not run on family 6 model 62
+[    3.445578] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.453982] ACPI: Power Button [PWRF]
+[    3.460232] ERST: Error Record Serialization Table (ERST) support is initialized.
+[    3.468727] pstore: Registered erst as persistent store backend
+[    3.475453] GHES: GHES is not enabled!
+[    3.479867] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    3.507556] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    3.536346] 00:03: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    3.546308] Linux agpgart interface v0.103
+[    3.552853] brd: module loaded
+[    3.557212] loop: module loaded
+[    3.561149] libphy: Fixed MDIO Bus: probed
+[    3.565840] tun: Universal TUN/TAP device driver, 1.6
+[    3.571595] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    3.578669] PPP generic driver version 2.4.2
+[    3.583636] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.591058] ehci-pci: EHCI PCI platform driver
+[    3.596373] ehci-pci 0000:00:1a.0: EHCI Host Controller
+[    3.602338] ehci-pci 0000:00:1a.0: new USB bus registered, assigned bus number 1
+[    3.610750] ehci-pci 0000:00:1a.0: debug port 2
+[    3.619839] ehci-pci 0000:00:1a.0: cache line size of 64 is not supported
+[    3.619852] ehci-pci 0000:00:1a.0: irq 23, io mem 0xdf0fd000
+[    3.634332] ehci-pci 0000:00:1a.0: USB 2.0 started, EHCI 1.00
+[    3.640914] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.648611] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.656809] usb usb1: Product: EHCI Host Controller
+[    3.662367] usb usb1: Manufacturer: Linux 3.19.0-30-generic ehci_hcd
+[    3.669578] usb usb1: SerialNumber: 0000:00:1a.0
+[    3.674961] hub 1-0:1.0: USB hub found
+[    3.679265] hub 1-0:1.0: 2 ports detected
+[    3.684157] ehci-pci 0000:00:1d.0: EHCI Host Controller
+[    3.690112] ehci-pci 0000:00:1d.0: new USB bus registered, assigned bus number 2
+[    3.698523] ehci-pci 0000:00:1d.0: debug port 2
+[    3.707617] ehci-pci 0000:00:1d.0: cache line size of 64 is not supported
+[    3.707630] ehci-pci 0000:00:1d.0: irq 22, io mem 0xdf0fe000
+[    3.722401] ehci-pci 0000:00:1d.0: USB 2.0 started, EHCI 1.00
+[    3.728978] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.736676] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.744883] usb usb2: Product: EHCI Host Controller
+[    3.750442] usb usb2: Manufacturer: Linux 3.19.0-30-generic ehci_hcd
+[    3.757712] usb usb2: SerialNumber: 0000:00:1d.0
+[    3.763081] hub 2-0:1.0: USB hub found
+[    3.767384] hub 2-0:1.0: 2 ports detected
+[    3.772080] ehci-platform: EHCI generic platform driver
+[    3.778043] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.785066] ohci-pci: OHCI PCI platform driver
+[    3.790157] ohci-platform: OHCI generic platform driver
+[    3.796115] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.803386] i8042: PNP: No PS/2 controller found. Probing ports directly.
+[    3.970608] tsc: Refined TSC clocksource calibration: 2099.999 MHz
+[    4.030637] usb 1-1: new high-speed USB device number 2 using ehci-pci
+[    4.086680] usb 2-1: new high-speed USB device number 2 using ehci-pci
+[    4.223168] usb 1-1: New USB device found, idVendor=8087, idProduct=0024
+[    4.230771] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    4.235180] usb 2-1: New USB device found, idVendor=8087, idProduct=0024
+[    4.235181] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    4.235330] hub 2-1:1.0: USB hub found
+[    4.235429] hub 2-1:1.0: 8 ports detected
+[    4.263600] hub 1-1:1.0: USB hub found
+[    4.267951] hub 1-1:1.0: 6 ports detected
+[    4.515014] usb 2-1.2: new low-speed USB device number 3 using ehci-pci
+[    4.551043] usb 1-1.6: new high-speed USB device number 3 using ehci-pci
+[    4.840971] i8042: No controller found
+[    4.845366] mousedev: PS/2 mouse device common for all mice
+[    4.851816] rtc_cmos 00:01: RTC can wake from S4
+[    4.857227] rtc_cmos 00:01: rtc core: registered rtc_cmos as rtc0
+[    4.860662] usb 2-1.2: New USB device found, idVendor=413c, idProduct=2003
+[    4.860663] usb 2-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    4.860665] usb 2-1.2: Product: Dell USB Keyboard
+[    4.860666] usb 2-1.2: Manufacturer: Dell
+[    4.864169] usb 1-1.6: New USB device found, idVendor=0624, idProduct=0248
+[    4.864171] usb 1-1.6: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    4.864172] usb 1-1.6: Product: Gadget USB HUB
+[    4.864173] usb 1-1.6: Manufacturer: no manufacturer
+[    4.864174] usb 1-1.6: SerialNumber: 0123456789
+[    4.864445] hub 1-1.6:1.0: USB hub found
+[    4.864669] hub 1-1.6:1.0: 6 ports detected
+[    4.931549] rtc_cmos 00:01: alarms up to one day, y3k, 242 bytes nvram, hpet irqs
+[    4.943354] usb 2-1.8: new high-speed USB device number 4 using ehci-pci
+[    4.958971] i2c /dev entries driver
+[    4.963061] device-mapper: uevent: version 1.0.3
+[    4.968424] device-mapper: ioctl: 4.29.0-ioctl (2014-10-28) initialised: dm-devel@redhat.com
+[    4.978018] Switched to clocksource tsc
+[    4.978034] Intel P-state driver initializing.
+[    4.982539] Consider also installing thermald for improved thermal control.
+[    4.982573] ledtrig-cpu: registered to indicate activity on CPUs
+[    4.982681] PCCT header not found.
+[    4.982681] ACPI PCC probe failed.
+[    4.982792] TCP: cubic registered
+[    4.982940] NET: Registered protocol family 10
+[    4.983316] NET: Registered protocol family 17
+[    4.983330] Key type dns_resolver registered
+[    4.984224] Loading compiled-in X.509 certificates
+[    4.985183] Loaded X.509 cert 'Magrathea: Glacier signing key: 48a35745535d8d6f341b30c63c3aa38578743d0d'
+[    4.985201] registered taskstats version 1
+[    4.987101] Key type trusted registered
+[    4.990031] Key type encrypted registered
+[    4.990037] AppArmor: AppArmor sha1 policy hashing enabled
+[    4.990042] ima: No TPM chip found, activating TPM-bypass!
+[    4.990069] evm: HMAC attrs: 0x1
+[    4.993793]   Magic number: 3:456:783
+[    4.993848] pci 0000:00:16.1: hash matches
+[    4.995395] rtc_cmos 00:01: setting system clock to 2015-10-27 11:45:49 UTC (1445946349)
+[    4.995460] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    4.995461] EDD information not available.
+[    4.995511] PM: Hibernation image not present or could not be loaded.
+[    5.039928] usb 2-1.8: New USB device found, idVendor=0403, idProduct=6011
+[    5.039929] usb 2-1.8: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    5.039930] usb 2-1.8: Product: AMDA0058-0002-15171437
+[    5.039932] usb 2-1.8: Manufacturer: Netronome
+[    5.039933] usb 2-1.8: SerialNumber: 00
+[    5.136525] Freeing unused kernel memory: 1408K (ffffffff81d27000 - ffffffff81e87000)
+[    5.145421] Write protecting the kernel read-only data: 12288k
+[    5.152309] Freeing unused kernel memory: 260K (ffff8800017bf000 - ffff880001800000)
+[    5.161263] Freeing unused kernel memory: 340K (ffff880001bab000 - ffff880001c00000)
+[    5.167523] usb 1-1.6.1: new high-speed USB device number 4 using ehci-pci
+[    5.190971] systemd-udevd[272]: starting version 204
+[    5.215538] pps_core: LinuxPPS API ver. 1 registered
+[    5.222632] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    5.235065] hidraw: raw HID events driver (C) Jiri Kosina
+[    5.242136] PTP clock support registered
+[    5.248078] ahci 0000:00:1f.2: version 3.0
+[    5.249400] dca service started, version 1.12.1
+[    5.250985] usbcore: registered new interface driver usbhid
+[    5.250986] usbhid: USB HID core driver
+[    5.263664] ahci 0000:00:1f.2: AHCI 0001.0300 32 slots 6 ports 3 Gbps 0x3f impl RAID mode
+[    5.263667] ahci 0000:00:1f.2: flags: 64bit ncq sntf pm led clo pio slum part ems apst 
+[    5.268480] usb 1-1.6.1: New USB device found, idVendor=0624, idProduct=0249
+[    5.268481] usb 1-1.6.1: New USB device strings: Mfr=4, Product=5, SerialNumber=6
+[    5.268482] usb 1-1.6.1: Product: Keyboard/Mouse Function
+[    5.268484] usb 1-1.6.1: Manufacturer: Avocent
+[    5.268485] usb 1-1.6.1: SerialNumber: 20120917
+[    5.319660] input: Dell Dell USB Keyboard as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.2/2-1.2:1.0/0003:413C:2003.0001/input/input1
+[    5.324219] scsi host0: ahci
+[    5.324338] scsi host1: ahci
+[    5.324442] scsi host2: ahci
+[    5.324542] scsi host3: ahci
+[    5.324641] scsi host4: ahci
+[    5.324742] scsi host5: ahci
+[    5.324789] ata1: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff100 irq 36
+[    5.324791] ata2: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff180 irq 36
+[    5.324794] ata3: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff200 irq 36
+[    5.324796] ata4: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff280 irq 36
+[    5.324799] ata5: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff300 irq 36
+[    5.324801] ata6: SATA max UDMA/133 abar m2048@0xdf0ff000 port 0xdf0ff380 irq 36
+[    5.404530] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.2.15-k
+[    5.412528] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    5.418975] i40e: Intel(R) Ethernet Connection XL710 Network Driver - version 1.2.2-k
+[    5.427860] i40e: Copyright (c) 2013 - 2014 Intel Corporation.
+[    5.454310] i40e 0000:02:00.0: f4.22 a1.1 n04.24 e800013fc
+[    5.459868] hid-generic 0003:413C:2003.0001: input,hidraw0: USB HID v1.10 Keyboard [Dell Dell USB Keyboard] on usb-0000:00:1d.0-1.2/input0
+[    5.460035] input: Avocent Keyboard/Mouse Function as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6.1/1-1.6.1:1.0/0003:0624:0249.0002/input/input2
+[    5.515869] hid-generic 0003:0624:0249.0002: input,hidraw1: USB HID v1.00 Keyboard [Avocent Keyboard/Mouse Function] on usb-0000:00:1a.0-1.6.1/input0
+[    5.520979] igb 0000:06:00.0: added PHC on eth0
+[    5.520980] igb 0000:06:00.0: Intel(R) Gigabit Ethernet Network Connection
+[    5.520982] igb 0000:06:00.0: eth0: (PCIe:5.0Gb/s:Width x2) f0:1f:af:e9:23:7d
+[    5.521059] igb 0000:06:00.0: eth0: PBA No: 106300-000
+[    5.521061] igb 0000:06:00.0: Using MSI-X interrupts. 8 rx queue(s), 8 tx queue(s)
+[    5.566629] input: Avocent Keyboard/Mouse Function as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6.1/1-1.6.1:1.1/0003:0624:0249.0003/input/input3
+[    5.582319] hid-generic 0003:0624:0249.0003: input,hidraw2: USB HID v1.00 Mouse [Avocent Keyboard/Mouse Function] on usb-0000:00:1a.0-1.6.1/input1
+[    5.597240] input: Avocent Keyboard/Mouse Function as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6.1/1-1.6.1:1.2/0003:0624:0249.0004/input/input4
+[    5.611227] igb 0000:06:00.1: added PHC on eth1
+[    5.611228] igb 0000:06:00.1: Intel(R) Gigabit Ethernet Network Connection
+[    5.611229] igb 0000:06:00.1: eth1: (PCIe:5.0Gb/s:Width x2) f0:1f:af:e9:23:7e
+[    5.611306] igb 0000:06:00.1: eth1: PBA No: 106300-000
+[    5.611307] igb 0000:06:00.1: Using MSI-X interrupts. 8 rx queue(s), 8 tx queue(s)
+[    5.643912] ata3: SATA link down (SStatus 0 SControl 300)
+[    5.643945] ata5: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    5.643974] ata6: SATA link down (SStatus 0 SControl 300)
+[    5.644000] ata2: SATA link down (SStatus 0 SControl 300)
+[    5.644029] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    5.644053] ata4: SATA link down (SStatus 0 SControl 300)
+[    5.645377] ata5.00: ATAPI: PLDS DVD-ROM DH-16D7S, WD11, max UDMA/100
+[    5.647079] ata5.00: configured for UDMA/100
+[    5.653907] ata1.00: ATA-8: WDC WD5003ABYX-18WERA0, 01.01S04, max UDMA/133
+[    5.653908] ata1.00: 976773168 sectors, multi 0: LBA48 NCQ (depth 31/32), AA
+[    5.654812] ata1.00: configured for UDMA/133
+[    5.654924] scsi 0:0:0:0: Direct-Access     ATA      WDC WD5003ABYX-1 1S04 PQ: 0 ANSI: 5
+[    5.655159] sd 0:0:0:0: [sda] 976773168 512-byte logical blocks: (500 GB/465 GiB)
+[    5.655171] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    5.655197] sd 0:0:0:0: [sda] Write Protect is off
+[    5.655200] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    5.655219] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    5.657208] scsi 4:0:0:0: CD-ROM            PLDS     DVD-ROM DH-16D7S WD11 PQ: 0 ANSI: 5
+[    5.667272]  sda: sda1 sda2 < sda5 >
+[    5.667517] sd 0:0:0:0: [sda] Attached SCSI disk
+[    5.678164] sr 4:0:0:0: [sr0] scsi3-mmc drive: 48x/48x cd/rw xa/form2 cdda tray
+[    5.678165] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    5.678264] sr 4:0:0:0: Attached scsi CD-ROM sr0
+[    5.678322] sr 4:0:0:0: Attached scsi generic sg1 type 5
+[    5.691779] igb 0000:06:00.0 em1: renamed from eth0
+[    5.720183] i40e 0000:02:00.0: FCoE is supported.
+[    5.722786] i40e 0000:02:00.0: MAC address: 68:05:ca:34:8d:48
+[    5.726803] i40e 0000:02:00.0: SAN MAC: 68:05:ca:34:8d:4c
+[    5.734873] i40e 0000:02:00.0: fcoe queues = 8
+[    5.827998] hid-generic 0003:0624:0249.0004: input,hidraw3: USB HID v1.00 Mouse [Avocent Keyboard/Mouse Function] on usb-0000:00:1a.0-1.6.1/input2
+[    5.844175] systemd-udevd[284]: renamed network interface eth0 to em1
+[    5.846082] igb 0000:06:00.1 em2: renamed from eth1
+[    5.872187] systemd-udevd[279]: renamed network interface eth1 to em2
+[    5.942264] i40e 0000:02:00.0: i40e_ptp_init: added PHC on eth0
+[    6.066572] i40e 0000:02:00.0: PCI-Express: Speed 8.0GT/s Width x8
+[    6.073594] i40e 0000:02:00.0: Features: PF-id[0] VFs: 64 VSIs: 66 QP: 24 RSS FD_ATR FD_SB NTUPLE DCB PTP FCOE 
+[    6.104810] i40e 0000:02:00.1: f4.22 a1.1 n04.24 e800013fc
+[    6.336440] i40e 0000:02:00.1: FCoE is supported.
+[    6.344410] i40e 0000:02:00.1: MAC address: 68:05:ca:34:8d:49
+[    6.354961] i40e 0000:02:00.1: SAN MAC: 68:05:ca:34:8d:4d
+[    6.377190] i40e 0000:02:00.1: fcoe queues = 8
+[    6.433740] i40e 0000:02:00.1: i40e_ptp_init: added PHC on eth1
+[    6.536906] i40e 0000:02:00.1: PCI-Express: Speed 8.0GT/s Width x8
+[    6.543929] i40e 0000:02:00.1: Features: PF-id[1] VFs: 64 VSIs: 66 QP: 24 RSS FD_ATR FD_SB NTUPLE DCB PTP FCOE 
+[    6.593678] i40e 0000:02:00.0 p4p1: renamed from eth0
+[    6.606957] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[    6.616782] systemd-udevd[274]: renamed network interface eth0 to p4p1
+[    6.617057] i40e 0000:02:00.1 p4p2: renamed from eth1
+[    6.640791] systemd-udevd[278]: renamed network interface eth1 to p4p2
+[    7.209045] random: init urandom read with 112 bits of entropy available
+[    7.411571] random: nonblocking pool is initialized
+[    9.256478] ERST: NVRAM ERST Log Address Range not implemented yet.
+[    9.392381] systemd-udevd[506]: starting version 204
+[    9.585591] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.585642] parport: module verification failed: signature and/or  required key missing - tainting kernel
+[    9.653941] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.678888] lp: driver loaded but no devices found
+[    9.713857] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.750441] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.750447] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.750454] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.750464] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.750467] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.769118] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.769126] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.769130] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.769134] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.772771] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.778598] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.784679] ipmi message handler version 39.2
+[    9.784961] usbcore: registered new interface driver usbserial
+[    9.785028] usbcore: registered new interface driver usbserial_generic
+[    9.785092] usbserial: USB Serial support registered for generic
+[    9.787833] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.788302] ACPI Error: No handler for Region [SYSI] (ffff88042f4a31b0) [IPMI] (20141107/evregion-163)
+[    9.788307] ACPI Error: Region IPMI (ID=7) has no handler (20141107/exfldio-299)
+[    9.788312] ACPI Error: Method parse/execution failed [\_SB_.PMI0._GHL] (Node ffff88042f4a6050), AE_NOT_EXIST (20141107/psparse-536)
+[    9.788321] ACPI Error: Method parse/execution failed [\_SB_.PMI0._PMC] (Node ffff88042f4a2fa0), AE_NOT_EXIST (20141107/psparse-536)
+[    9.788328] ACPI Exception: AE_NOT_EXIST, Evaluating _PMC (20141107/power_meter-755)
+[    9.789686] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.789989] mei_me 0000:00:16.0: Device doesn't have valid ME Interface
+[    9.794694] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.794698] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.794706] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.794717] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.795290] usbcore: registered new interface driver ftdi_sio
+[    9.795311] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    9.795371] ftdi_sio 2-1.8:1.0: FTDI USB Serial Device converter detected
+[    9.795424] usb 2-1.8: Detected FT4232H
+[    9.795707] usb 2-1.8: FTDI USB Serial Device converter now attached to ttyUSB0
+[    9.795735] ftdi_sio 2-1.8:1.1: FTDI USB Serial Device converter detected
+[    9.795769] usb 2-1.8: Detected FT4232H
+[    9.796055] usb 2-1.8: FTDI USB Serial Device converter now attached to ttyUSB1
+[    9.796075] ftdi_sio 2-1.8:1.2: FTDI USB Serial Device converter detected
+[    9.796113] usb 2-1.8: Detected FT4232H
+[    9.796427] usb 2-1.8: FTDI USB Serial Device converter now attached to ttyUSB2
+[    9.796446] ftdi_sio 2-1.8:1.3: FTDI USB Serial Device converter detected
+[    9.796482] usb 2-1.8: Detected FT4232H
+[    9.796677] usb 2-1.8: FTDI USB Serial Device converter now attached to ttyUSB3
+[    9.797556] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.797978] IPMI System Interface driver.
+[    9.798026] ipmi_si: probing via SMBIOS
+[    9.798029] ipmi_si: SMBIOS: io 0xca8 regsize 1 spacing 4 irq 10
+[    9.798031] ipmi_si: Adding SMBIOS-specified kcs state machine
+[    9.798035] ipmi_si: Trying SMBIOS-specified kcs state machine at i/o address 0xca8, slave address 0x20, irq 10
+[    9.806193] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.812595] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.812599] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.812942] wmi: Mapper loaded
+[    9.819477] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.820205] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    9.848073] nfp: NFP PCIe Driver, Copyright (C) 2014-2015 Netronome Systems
+[    9.848076] nfp src version: 
+[    9.848076] nfp src path: /var/lib/dkms/nfp-bsp/2015.9.8/build/
+[    9.848076] nfp build user id: root
+[    9.848076] nfp build user: root
+[    9.848076] nfp build host: cbtest1
+[    9.848076] nfp build path: /var/lib/dkms/nfp-bsp/2015.9.8/build
+[    9.848080] Netronome NFP CPP API
+[    9.848124] nfp-mon-err: NFP Error Monitor Driver, Copyright (C) 2011,2015 Netronome Systems
+[    9.848185] nfp-net-null: NFP Null Network Driver, Copyright (C) 2014-2015 Netronome Systems
+[    9.848187] nfp-net-vnic: NFP vNIC driver, Copyright (C) 2010-2015 Netronome Systems
+[    9.848414] nfp 0000:03:00.0: Netronome Flow Processor (NFP6000) PCIe Card Probe
+[    9.848423] nfp 0000:03:00.0: Serial Number: 00-15-4d-0a-0b-e4
+[    9.848460] nfp 0000:03:00.0: BAR0.0 RESERVED: General Mapping/MSI-X SRAM
+[    9.848463] nfp 0000:03:00.0: BAR0.1 RESERVED: PCIe XPB/MSI-X PBA
+[    9.848503] nfp 0000:03:00.0: BAR0.4 RESERVED: Explicit0 Mapping
+[    9.848543] nfp 0000:03:00.0: BAR0.5 RESERVED: Explicit1 Mapping
+[    9.848562] nfp 0000:03:00.0: 24 NFP PCI2CPP BARs, 20 free
+[    9.848577] nfp 0000:03:00.0: Found a NFP6000 on the PCIe bus.
+[    9.848593] nfp 0000:03:00.0: 3 cache BARs
+[    9.848632] nfp 0000:03:00.0: Model: 0x648a1c10, Interface: 0x10ff
+[    9.848929] nfp 0000:41:00.0: Netronome Flow Processor (NFP3200) PCIe Card Probe
+[    9.849039] nfp 0000:41:00.0: Found a NFP3200 on the PCIe bus.
+[    9.849059] nfp 0000:41:00.0: Workaround: NFP3200 A revs
+[    9.849076]  cpp: WARNING: NFP Resource Table not found at 7:0:1:0x0, injecting workaround
+[    9.851107] nfp 0000:41:00.0: Model: 0x324000a2, Interface: 0x10ff
+[    9.865244] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887153] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887161] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887169] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887173] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887178] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887192] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887196] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887210] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887214] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887219] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887234] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887235] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887247] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887263] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887267] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887276] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887280] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887292] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887293] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887301] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887302] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887322] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887323] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.887328] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.907053] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.907398] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.2)
+[    9.947319] ipmi_si ipmi_si.0: Using irq 10
+[    9.949753] ipmi_si ipmi_si.0: Could not set the global enables: 0xcc.
+[    9.959656] ipmi_si ipmi_si.0: Found new BMC (man_id: 0x0002a2, prod_id: 0x0100, dev_id: 0x20)
+[    9.959668] ipmi_si ipmi_si.0: IPMI kcs interface initialized
+[    9.996259] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996267] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996274] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996283] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996293] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996301] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996307] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996316] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996322] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996332] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996341] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996345] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996357] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996366] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996371] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996381] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996391] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996399] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996410] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996418] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996431] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996445] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996456] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[    9.996627] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.000131] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.000138] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.000625] EDAC MC: Ver: 3.0.0
+[   10.025099] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.025359] IPMI SSIF Interface driver
+[   10.072242] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+[   10.091647] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.091651] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.091899] EDAC sbridge: Seeking for: PCI ID 8086:0ea0
+[   10.091907] EDAC sbridge: Seeking for: PCI ID 8086:0ea0
+[   10.091912] EDAC sbridge: Seeking for: PCI ID 8086:0ea0
+[   10.091914] EDAC sbridge: Seeking for: PCI ID 8086:0ea8
+[   10.091918] EDAC sbridge: Seeking for: PCI ID 8086:0ea8
+[   10.091923] EDAC sbridge: Seeking for: PCI ID 8086:0ea8
+[   10.091925] EDAC sbridge: Seeking for: PCI ID 8086:0e71
+[   10.091929] EDAC sbridge: Seeking for: PCI ID 8086:0e71
+[   10.091933] EDAC sbridge: Seeking for: PCI ID 8086:0e71
+[   10.091935] EDAC sbridge: Seeking for: PCI ID 8086:0eaa
+[   10.091940] EDAC sbridge: Seeking for: PCI ID 8086:0eaa
+[   10.091944] EDAC sbridge: Seeking for: PCI ID 8086:0eaa
+[   10.091946] EDAC sbridge: Seeking for: PCI ID 8086:0eab
+[   10.091950] EDAC sbridge: Seeking for: PCI ID 8086:0eab
+[   10.091954] EDAC sbridge: Seeking for: PCI ID 8086:0eab
+[   10.091956] EDAC sbridge: Seeking for: PCI ID 8086:0eac
+[   10.091961] EDAC sbridge: Seeking for: PCI ID 8086:0eac
+[   10.091965] EDAC sbridge: Seeking for: PCI ID 8086:0eac
+[   10.091967] EDAC sbridge: Seeking for: PCI ID 8086:0ead
+[   10.091971] EDAC sbridge: Seeking for: PCI ID 8086:0ead
+[   10.091975] EDAC sbridge: Seeking for: PCI ID 8086:0ead
+[   10.091977] EDAC sbridge: Seeking for: PCI ID 8086:0ec8
+[   10.091982] EDAC sbridge: Seeking for: PCI ID 8086:0ec8
+[   10.091986] EDAC sbridge: Seeking for: PCI ID 8086:0ec8
+[   10.091987] EDAC sbridge: Seeking for: PCI ID 8086:0ec9
+[   10.091992] EDAC sbridge: Seeking for: PCI ID 8086:0ec9
+[   10.091996] EDAC sbridge: Seeking for: PCI ID 8086:0ec9
+[   10.091997] EDAC sbridge: Seeking for: PCI ID 8086:0eca
+[   10.092002] EDAC sbridge: Seeking for: PCI ID 8086:0eca
+[   10.092006] EDAC sbridge: Seeking for: PCI ID 8086:0eca
+[   10.092007] EDAC sbridge: Seeking for: PCI ID 8086:0e60
+[   10.092013] EDAC sbridge: Seeking for: PCI ID 8086:0e6a
+[   10.092019] EDAC sbridge: Seeking for: PCI ID 8086:0e6b
+[   10.092026] EDAC sbridge: Seeking for: PCI ID 8086:0eb8
+[   10.092033] EDAC sbridge: Seeking for: PCI ID 8086:0ebc
+[   10.092278] EDAC MC0: Giving out device to module sbridge_edac.c controller Ivy Bridge Socket#0: DEV 0000:3f:0e.0 (POLLED)
+[   10.092592] EDAC MC1: Giving out device to module sbridge_edac.c controller Ivy Bridge Socket#1: DEV 0000:7f:0e.0 (POLLED)
+[   10.092595] EDAC sbridge:  Ver: 1.1.0 
+[   10.118113] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118117] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118125] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118133] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118141] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118153] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118162] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118165] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118176] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118186] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118191] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118199] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118209] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118215] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118220] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118320] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118327] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118335] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118340] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118532] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118541] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118547] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118557] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.118561] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.122882] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.122884] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162606] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162610] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162612] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162614] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162619] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162623] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162626] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162630] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162634] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162639] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162640] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162646] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162653] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162661] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162667] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162674] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162684] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162688] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162701] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162706] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162831] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162852] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162858] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.162860] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192288] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192292] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192301] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192309] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192314] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192322] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192335] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192339] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192346] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192358] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192363] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192372] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192380] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192387] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192390] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192399] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192406] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192412] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192420] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192427] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192545] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192553] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192558] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.192565] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203927] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203934] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203939] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203948] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203957] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203962] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203969] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203977] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203985] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203989] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.203995] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204006] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204016] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204019] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204030] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204041] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204045] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204051] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204060] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204170] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204174] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204194] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204201] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.204206] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240465] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240469] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240473] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240477] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240482] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240489] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240496] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240500] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240510] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240514] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240665] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240671] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240678] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240692] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240696] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240704] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240712] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240730] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240733] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240737] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240746] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240753] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240836] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.240838] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.241064] AVX version of gcm_enc/dec engaged.
+[   10.241066] AES CTR mode by8 optimization enabled
+[   10.258905] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258914] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258925] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258932] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258942] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258951] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258961] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258971] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258982] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258991] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.258998] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259010] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259018] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259024] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259028] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259037] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259041] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259047] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259057] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259163] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259167] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259179] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259188] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.259189] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.267092] IPv6: ADDRCONF(NETDEV_UP): em1: link is not ready
+[   10.297865] init: Failed to obtain startpar-bridge instance: Unknown parameter: INSTANCE
+[   10.311828] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311838] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311844] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311854] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311866] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311875] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311883] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311890] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311893] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311906] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311913] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311925] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311933] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311944] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311954] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311959] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311966] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.311978] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312064] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312070] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312076] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312083] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312092] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.312096] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409109] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409124] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409126] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409130] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409134] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409137] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409141] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409150] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409161] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409180] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409183] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409186] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409190] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409198] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409211] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409218] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409225] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409236] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409367] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409372] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409379] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409389] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409395] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.409404] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.477048] init: statd-mounting (/releases-intern) main process (929) killed by TERM signal
+[   10.502921] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502925] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502930] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502937] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502957] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502959] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502964] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502983] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502985] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502992] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.502999] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503017] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503047] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503048] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503052] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503060] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503075] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503087] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503103] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503430] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503435] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503443] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503623] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.503632] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546312] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546333] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546340] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546358] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546365] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546373] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546376] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546383] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546385] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546406] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546423] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546433] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546436] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546448] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546456] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546479] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546599] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546607] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546622] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546638] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546644] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546657] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546660] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.546662] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592758] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592767] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592771] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592777] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592778] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592783] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592785] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592789] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592792] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592795] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592800] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592804] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592808] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592812] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592819] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592823] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592832] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592838] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592844] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592849] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592855] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592863] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592868] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.592871] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.630372] init: failsafe main process (1053) killed by TERM signal
+[   10.656154] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656165] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656172] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656181] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656190] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656200] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656207] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656214] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656223] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656232] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656240] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656253] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656256] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656264] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656286] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656295] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656309] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656313] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656316] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656333] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656339] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656345] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656350] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.656356] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.739740] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788255] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788258] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788263] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788264] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788268] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788271] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788273] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788276] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788278] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788280] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788282] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788285] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788287] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788289] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788291] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788294] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788296] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788299] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788301] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788303] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788304] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788307] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788310] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788311] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788313] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788315] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788316] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788319] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788320] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788321] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788324] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788337] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788342] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788347] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788352] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788353] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788356] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788361] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788384] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788391] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788393] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788397] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788399] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788401] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788403] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788407] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.788452] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.788457] visorutil: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.795842] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.796574] FS-Cache: Loaded
+[   10.900834] init: plymouth-upstart-bridge main process ended, respawning
+[   10.929154] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929160] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929166] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929168] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929171] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929177] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929179] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929185] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929190] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929194] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929199] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929202] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929209] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929216] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929220] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929221] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   10.929224] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929227] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   10.929234] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   10.929246] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   10.929251] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   10.929261] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   10.929269] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   10.929279] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   10.929285] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929289] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929291] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929294] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   10.929296] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929299] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929305] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929308] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929316] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929318] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929324] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929327] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929332] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929359] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929363] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929370] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929373] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929376] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929377] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929379] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929384] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929386] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929389] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929391] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929392] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929394] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929396] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929402] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929403] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.929406] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.929408] visorchannel: module is from the staging directory, the quality is unknown, you have been warned.
+[   10.947788] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   10.956098] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   10.956108] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   10.956115] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   10.956130] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   10.956137] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   10.956147] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   10.956158] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   10.956170] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   10.956183] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   10.976106] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   10.976114] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   10.976122] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   10.976137] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   10.976144] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   10.976154] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   10.976165] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   10.976176] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   10.976189] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.000130] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.000140] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.000148] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.000166] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.000173] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.000184] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.000195] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.000208] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.000222] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.016148] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.016159] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.016166] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.016181] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.016188] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.016198] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.016209] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.016221] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.016233] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.032158] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.032167] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.032174] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.032188] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.032195] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.032206] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.032216] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.032228] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.032240] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.044149] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.044157] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.044164] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.044179] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.044187] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.044202] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.044219] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.044235] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.044248] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.056161] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.056170] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.056177] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.056194] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.056207] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.056222] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.056238] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.056258] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.056279] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.072165] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.072176] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.072184] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.072201] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.072209] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.072222] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.072236] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.072255] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.072274] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.088185] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.088196] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.088203] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.088219] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.088226] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.088237] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.088249] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.088261] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.088274] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.100191] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.100200] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.100207] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.100221] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.100228] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.100245] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.100260] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.100273] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.100285] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.108200] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.108211] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.108221] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.108237] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.108246] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.108258] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.108273] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.108288] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.108304] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.132224] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.132233] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.132242] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.132262] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.132269] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.132285] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.132299] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.132316] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.132336] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.152239] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.152249] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.152257] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.152270] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.152277] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.152285] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.152295] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.152307] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.152320] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.168254] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.168263] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.168271] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.168286] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.168293] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.168304] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.168315] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.168327] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.168340] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.188267] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.188281] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.188295] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.188319] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.188332] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.188351] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.188370] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.188393] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.188418] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.200270] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.200279] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.200286] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.200302] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.200309] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.200317] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.200331] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.200346] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.200363] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.216293] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.216306] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.216319] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.216344] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.216356] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.216375] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.216396] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.216421] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.216440] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.228292] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.228300] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.228308] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.228323] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.228330] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.228340] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.228351] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.228363] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.228375] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.240518] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.240531] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.240544] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.240566] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.240579] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.240597] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.240615] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.240633] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.240652] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.264317] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.264328] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.264335] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.264348] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.264355] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.264364] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.264373] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.264385] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.264398] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.280539] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.280549] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.280556] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.280607] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.280614] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.280625] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.280638] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.280654] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.280669] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.296700] visorchannel: Unknown symbol visor_memregion_create (err 0)
+[   11.297925] visorchannel: Unknown symbol visor_memregion_destroy (err 0)
+[   11.297932] visorchannel: Unknown symbol visor_memregion_get_nbytes (err 0)
+[   11.297943] visorchannel: Unknown symbol visor_memregion_write (err 0)
+[   11.297949] visorchannel: Unknown symbol visor_memregion_resize (err 0)
+[   11.297957] visorchannel: Unknown symbol visor_memregion_get_physaddr (err 0)
+[   11.297966] visorchannel: Unknown symbol visor_memregion_create_overlapped (err 0)
+[   11.297975] visorchannel: Unknown symbol visor_memregion_read (err 0)
+[   11.297986] visorchannel: Unknown symbol unisys_spar_platform (err 0)
+[   11.316696] RPC: Registered named UNIX socket transport module.
+[   11.316698] RPC: Registered udp transport module.
+[   11.316700] RPC: Registered tcp transport module.
+[   11.316701] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   11.346633] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.361857] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.451326] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.453767] FS-Cache: Netfs 'nfs' registered for caching
+[   11.455605] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.516199] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.599143] Request for unknown module key 'Magrathea: Glacier signing key: 53b87e38b524cd2812672fc8904371ea0fabdce5' err -11
+[   11.600563] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[   11.723843] init: idmapd-mounting (/releases-intern) main process (928) killed by TERM signal
+[   11.888768] init: udev-fallback-graphics main process (1228) terminated with status 1
+[   11.925070] init: plymouth-splash main process (1302) terminated with status 1
+[   13.596450] igb 0000:06:00.0 em1: igb: em1 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX/TX
+[   13.596592] IPv6: ADDRCONF(NETDEV_CHANGE): em1: link becomes ready
+[   25.327347] nfp 0000:41:00.0: Removed VFs.
+[   25.327769] nfp 0000:03:00.0: Removed VFs.
+[   25.440067] nfp-pciebench: NFP PCIe benchmark driver
+[   25.440070] Netronome NFP CPP API
+[   25.440207] nfp-pciebench 0000:03:00.0: Netronome Flow Processor (NFP6000) PCIe Card Probe
+[   25.440213] nfp-pciebench 0000:03:00.0: Serial Number: 00-15-4d-0a-0b-e4
+[   25.440246] nfp-pciebench 0000:03:00.0: BAR0.0 RESERVED: General Mapping/MSI-X SRAM
+[   25.440248] nfp-pciebench 0000:03:00.0: BAR0.1 RESERVED: PCIe XPB/MSI-X PBA
+[   25.440269] nfp-pciebench 0000:03:00.0: BAR0.4 RESERVED: Explicit0 Mapping
+[   25.440290] nfp-pciebench 0000:03:00.0: BAR0.5 RESERVED: Explicit1 Mapping
+[   25.440303] nfp-pciebench 0000:03:00.0: 24 NFP PCI2CPP BARs, 20 free
+[   25.440305] nfp-pciebench 0000:03:00.0: Found a NFP6000 on the PCIe bus.
+[   25.440322] nfp-pciebench 0000:03:00.0: 3 cache BARs
+[   25.440354] nfp-pciebench 0000:03:00.0: Model: 0x648a1c10, Interface: 0x10ff
+[   25.458256] nfp-pciebench 0000:41:00.0: Netronome Flow Processor (NFP3200) PCIe Card Probe
+[   25.458358] nfp-pciebench 0000:41:00.0: Found a NFP3200 on the PCIe bus.
+[   25.458394] nfp-pciebench 0000:41:00.0: Workaround: NFP3200 A revs
+[   25.458414] nfp-pciebench 0000:41:00.0: Model: 0x324000a2, Interface: 0x10ff
+[12367.205920] perf interrupt took too long (2512 > 2500), lowering kernel.perf_event_max_sample_rate to 50000

@@ -1,0 +1,105 @@
+Machine (31GB) cpuset=0x00ffffff
+  NUMANode L#0 (P#0 16GB) cpuset=0x00555555
+    Socket L#0 cpuset=0x00555555
+      L3 L#0 (15MB) cpuset=0x00555555
+        L2 L#0 (256KB) cpuset=0x00001001
+          L1d L#0 (32KB) cpuset=0x00001001
+            L1i L#0 (32KB) cpuset=0x00001001
+              Core L#0 cpuset=0x00001001
+                PU L#0 (P#0) cpuset=0x00000001
+                PU L#1 (P#12) cpuset=0x00001000
+        L2 L#1 (256KB) cpuset=0x00004004
+          L1d L#1 (32KB) cpuset=0x00004004
+            L1i L#1 (32KB) cpuset=0x00004004
+              Core L#1 cpuset=0x00004004
+                PU L#2 (P#2) cpuset=0x00000004
+                PU L#3 (P#14) cpuset=0x00004000
+        L2 L#2 (256KB) cpuset=0x00010010
+          L1d L#2 (32KB) cpuset=0x00010010
+            L1i L#2 (32KB) cpuset=0x00010010
+              Core L#2 cpuset=0x00010010
+                PU L#4 (P#4) cpuset=0x00000010
+                PU L#5 (P#16) cpuset=0x00010000
+        L2 L#3 (256KB) cpuset=0x00040040
+          L1d L#3 (32KB) cpuset=0x00040040
+            L1i L#3 (32KB) cpuset=0x00040040
+              Core L#3 cpuset=0x00040040
+                PU L#6 (P#6) cpuset=0x00000040
+                PU L#7 (P#18) cpuset=0x00040000
+        L2 L#4 (256KB) cpuset=0x00100100
+          L1d L#4 (32KB) cpuset=0x00100100
+            L1i L#4 (32KB) cpuset=0x00100100
+              Core L#4 cpuset=0x00100100
+                PU L#8 (P#8) cpuset=0x00000100
+                PU L#9 (P#20) cpuset=0x00100000
+        L2 L#5 (256KB) cpuset=0x00400400
+          L1d L#5 (32KB) cpuset=0x00400400
+            L1i L#5 (32KB) cpuset=0x00400400
+              Core L#5 cpuset=0x00400400
+                PU L#10 (P#10) cpuset=0x00000400
+                PU L#11 (P#22) cpuset=0x00400000
+    HostBridge L#0
+      PCIBridge
+        PCI 8086:1583
+          Net L#0 "fcoe0"
+          Net L#1 "p4p1"
+        PCI 8086:1583
+          Net L#2 "fcoe1"
+          Net L#3 "p4p2"
+      PCIBridge
+        PCI 19ee:6000
+      PCIBridge
+        PCI 8086:1521
+          Net L#4 "em1"
+        PCI 8086:1521
+          Net L#5 "em2"
+      PCIBridge
+        PCIBridge
+          PCIBridge
+            PCIBridge
+              PCI 102b:0534
+      PCI 8086:1d04
+        Block L#6 "sda"
+        Block L#7 "sr0"
+  NUMANode L#1 (P#1 16GB) cpuset=0x00aaaaaa
+    Socket L#1 cpuset=0x00aaaaaa
+      L3 L#1 (15MB) cpuset=0x00aaaaaa
+        L2 L#6 (256KB) cpuset=0x00002002
+          L1d L#6 (32KB) cpuset=0x00002002
+            L1i L#6 (32KB) cpuset=0x00002002
+              Core L#6 cpuset=0x00002002
+                PU L#12 (P#1) cpuset=0x00000002
+                PU L#13 (P#13) cpuset=0x00002000
+        L2 L#7 (256KB) cpuset=0x00008008
+          L1d L#7 (32KB) cpuset=0x00008008
+            L1i L#7 (32KB) cpuset=0x00008008
+              Core L#7 cpuset=0x00008008
+                PU L#14 (P#3) cpuset=0x00000008
+                PU L#15 (P#15) cpuset=0x00008000
+        L2 L#8 (256KB) cpuset=0x00020020
+          L1d L#8 (32KB) cpuset=0x00020020
+            L1i L#8 (32KB) cpuset=0x00020020
+              Core L#8 cpuset=0x00020020
+                PU L#16 (P#5) cpuset=0x00000020
+                PU L#17 (P#17) cpuset=0x00020000
+        L2 L#9 (256KB) cpuset=0x00080080
+          L1d L#9 (32KB) cpuset=0x00080080
+            L1i L#9 (32KB) cpuset=0x00080080
+              Core L#9 cpuset=0x00080080
+                PU L#18 (P#7) cpuset=0x00000080
+                PU L#19 (P#19) cpuset=0x00080000
+        L2 L#10 (256KB) cpuset=0x00200200
+          L1d L#10 (32KB) cpuset=0x00200200
+            L1i L#10 (32KB) cpuset=0x00200200
+              Core L#10 cpuset=0x00200200
+                PU L#20 (P#9) cpuset=0x00000200
+                PU L#21 (P#21) cpuset=0x00200000
+        L2 L#11 (256KB) cpuset=0x00800800
+          L1d L#11 (32KB) cpuset=0x00800800
+            L1i L#11 (32KB) cpuset=0x00800800
+              Core L#11 cpuset=0x00800800
+                PU L#22 (P#11) cpuset=0x00000800
+                PU L#23 (P#23) cpuset=0x00800000
+    HostBridge L#8
+      PCIBridge
+        PCI 19ee:3200

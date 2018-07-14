@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-3.19.0-30-generic root=UUID=015064a5-4d1a-47e7-b2f0-151602be7723 ro console=tty console=ttyS0,115200n8 verbose ghes.disable=1 apei.disable=1 single
