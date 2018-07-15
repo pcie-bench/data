@@ -1,0 +1,74 @@
+# A gnuplot file to plot BW data sweeping over differnt transfer sizes
+#
+# invoke with:
+# gnuplot -e "base=<basefile name>" lat_cmd_sweep.gpl
+#
+
+bw_file = "bw_calc.dat"
+data_file = sprintf("%s.dat", base)
+out_file = sprintf("%s.pdf", base)
+out_file_trans = sprintf("%s-trans.pdf", base)
+
+set terminal pdf color solid enhanced size 5, 2.55
+
+set ylabel 'Bandwidth (Gb/s)'
+set xlabel 'Transfer Size (Bytes)'
+set key bottom right
+
+set yrange [0:]
+set xrange [0:2048]
+set mytics 4
+set xtics 128
+set mxtics 2
+set grid ytics mytics xtics mxtics
+set offsets graph 0, 0, 0.01, 0.01
+
+set output out_file
+plot \
+     "bw_calc.dat" using 1:4 w l lt 1 lw 1 t 'Theoretical Read', \
+     "bw_calc.dat" using 1:2 w l lt 2 lw 1 t 'Theoretical Write', \
+     "bw_calc.dat" using 1:6 w l lt 3 lw 1 t 'Theoretical Read/Write', \
+     "bw_calc.dat" using 1:8 w l lt 4 lw 1 t '40G Ethernet', \
+     data_file index 0 using 7:12 w lp lt 1 lw 2 t 'Read', \
+     ''        index 1 using 7:12 w lp lt 2 lw 2 t 'Write', \
+     ''        index 2 using 7:12 w lp lt 3 lw 2 t 'Read/Write'
+
+out_file = sprintf("%s-wr.pdf", base)
+set output out_file
+plot \
+     "bw_calc.dat" using 1:2 w l lw 1 t 'Theoretical Write', \
+     "bw_calc.dat" using 1:8 w l lw 1 t '40G Ethernet', \
+     data_file index 1 using 7:12 w lp lw 2 t 'Write'
+
+out_file = sprintf("%s-rd.pdf", base)
+set output out_file
+plot \
+     "bw_calc.dat" using 1:4 w l lw 1 t 'Theoretical Read', \
+     "bw_calc.dat" using 1:8 w l lw 1 t '40G Ethernet', \
+     data_file index 0 using 7:12 w lp lw 2 t 'Read'
+
+out_file = sprintf("%s-rdwr.pdf", base)
+set output out_file
+plot \
+     "bw_calc.dat" using 1:6 w l lw 1 t 'Theoretical Read/Write', \
+     "bw_calc.dat" using 1:8 w l lw 1 t '40G Ethernet', \
+     data_file index 2 using 7:12 w lp lw 2 t 'Read/Write'
+
+
+set key top right
+set ylabel "MPT/s or MPP/s"
+set yrange [*:*]
+set logscale y
+set mytics 10
+set offsets graph 0, 0, 0.01, 0.01
+set output out_file_trans
+plot \
+     "bw_calc.dat" using 1:($5/1000000)  w l lt 1 lw 1 t 'Theoretical Read', \
+     "bw_calc.dat" using 1:($3/1000000) w l lt 2 lw 1 t 'Theoretical Write', \
+     "bw_calc.dat" using 1:($7/1000000) w l lt 3 lw 1 t 'Theoretical Read/Write', \
+     "bw_calc.dat" using 1:($9/1000000) w l lt 4 lw 1 t '40G Ethernet', \
+     data_file index 0 using 7:($13/1000000) w lp lt 1 lw 1 t 'Read', \
+     ''        index 1 using 7:($13/1000000) w lp lt 2 lw 1 t 'Write', \
+     ''        index 2 using 7:($13/1000000) w lp lt 3 lw 1 t 'Read/Write'
+
+

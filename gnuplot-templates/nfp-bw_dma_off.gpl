@@ -1,0 +1,35 @@
+# A gnuplot file to plot DMA BW with different offsets
+#
+# invoke with:
+# gnuplot -e "base=<basefile name>" bw_dma_off.gpl
+#
+
+data_file = sprintf("%s.dat", base)
+out_file = sprintf("%s.pdf", base)
+
+set terminal pdf enhanced color solid
+
+set xlabel 'Host/Device Offset (Bytes)'
+set ylabel 'Bandwidth (Gb/s)'
+set key top right
+
+set xrange [-1:65]
+
+set mytics 4
+set mxtics 10
+set grid ytics mytics xtics mxtics
+
+set offsets graph 0, 0, 0.01, 0.01
+
+set output out_file
+plot \
+     data_file in 0 u 4:12 w lp lw 2 t '64B Host offset', \
+     ''        in 1 u 5:12 w lp lw 2 t '64B Device offset', \
+     ''        in 2 u 4:12 w lp lw 2 t '407B Host offset', \
+     ''        in 3 u 5:12 w lp lw 2 t '407B Device offset', \
+     ''        in 4 u 4:12 w lp lw 2 t '416B Host offset', \
+     ''        in 5 u 5:12 w lp lw 2 t '416B Device offset', \
+     ''        in 6 u 4:12 w lp lw 2 t '1024B Host offset', \
+     ''        in 7 u 5:12 w lp lw 2 t '1024B Device offset', \
+     ''        in 8 u 4:12 w lp lw 2 t '2048B Host offset', \
+     ''        in 9 u 5:12 w lp lw 2 t '2048B Device offset'

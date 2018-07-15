@@ -1,0 +1,38 @@
+# A gnuplot file to plot Latency data sweeping over differnt windows sizes
+#
+# invoke with:
+# gnuplot -e "base=<basefile name>" lat_cmd_sweep.gpl
+#
+
+data_file = sprintf("%s.dat", base)
+out_file = sprintf("%s.pdf", base)
+out_file_eb = sprintf("%s-eb.pdf", base)
+out_file_avg = sprintf("%s-avg.pdf", base)
+
+set terminal pdf color solid enhanced size 5, 5
+
+set xlabel 'Transfer Size (Bytes)'
+set ylabel 'Latency (ns)'
+set key bottom right
+
+set mytics 4
+set grid ytics mytics xtics mxtics
+set offsets graph 0, 0, 0.01, 0.01
+
+set output out_file
+plot \
+     data_file index 0 using 7:17 w lp lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 1 using 7:17 w lp lw 2 t 'PCIe Write/Read (HWarm)'
+
+set output out_file_avg
+plot \
+     data_file index 0 using 7:16 w lp lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 1 using 7:16 w lp lw 2 t 'PCIe Write/Read (HWarm)'
+
+
+set output out_file_eb
+plot \
+     data_file index 0 using 7:17       w l  ls 1 lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 0 using 7:17:18:20 w ye ls 1 lw 2 t '', \
+     ''        index 1 using 7:17       w l  ls 2 lw 2 t 'PCIe Write/Read (HWarm)', \
+     ''        index 1 using 7:17:18:20 w ye ls 2 lw 2 t ''

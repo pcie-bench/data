@@ -1,0 +1,53 @@
+# A gnuplot file to plot Latency data sweeping over differnt windows sizes
+#
+# invoke with:
+# gnuplot -e "base=<basefile name>" lat_cmd_sweep.gpl
+#
+
+data_file = sprintf("%s.dat", base)
+
+out_file_256 = sprintf("%s-256B.pdf", base)
+out_file_256_eb = sprintf("%s-256B-eb.pdf", base)
+
+out_file_1024 = sprintf("%s-1024B.pdf", base)
+out_file_1024_eb = sprintf("%s-1024B-eb.pdf", base)
+
+set terminal pdf color solid enhanced
+
+set xlabel 'Transfer Size (Bytes)'
+set ylabel 'Latency (ns)'
+set key bottom right
+
+set mytics 4
+set mxtics 1
+set grid ytics mytics xtics mxtics
+
+set xrange[239:272]
+
+set offsets graph 0, 0, 0.01, 0.01
+
+set output out_file_256
+plot \
+     data_file index 0 using 7:17 w lp lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 1 using 7:17 w lp lw 2 t 'PCIe Write/Read (HWarm)'
+
+set output out_file_256_eb
+plot \
+     data_file index 0 using 7:17       w l  ls 1 lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 0 using 7:17:18:20 w ye ls 1 lw 2 t '', \
+     ''        index 1 using 7:17       w l  ls 2 lw 2 t 'PCIe Write/Read (HWarm)', \
+     ''        index 1 using 7:17:18:20 w ye ls 2 lw 2 t ''
+
+
+set xrange[1007:1040]
+set output out_file_1024
+plot \
+     data_file index 2 using 7:17 w lp lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 3 using 7:17 w lp lw 2 t 'PCIe Write/Read (HWarm)'
+
+set output out_file_1024_eb
+plot \
+     data_file index 2 using 7:17       w l  ls 1 lw 2 t 'PCIe Read (HWarm)', \
+     ''        index 2 using 7:17:18:20 w ye ls 1 lw 2 t '', \
+     ''        index 3 using 7:17       w l  ls 2 lw 2 t 'PCIe Write/Read (HWarm)', \
+     ''        index 3 using 7:17:18:20 w ye ls 2 lw 2 t ''

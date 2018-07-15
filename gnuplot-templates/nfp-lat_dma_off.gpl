@@ -1,0 +1,73 @@
+# A gnuplot file to plot Latency data sweeping over differnt windows sizes
+#
+# invoke with:
+# gnuplot -e "base=<basefile name>" lat_cmd_sweep.gpl
+#
+
+data_file = sprintf("%s.dat", base)
+
+out_file = sprintf("%s.pdf", base)
+out_file_eb = sprintf("%s-eb.pdf", base)
+out_file_avg = sprintf("%s-avg.pdf", base)
+
+set terminal pdf color solid enhanced
+
+set xlabel 'Host/Device Offset (Bytes)'
+set ylabel 'Latency (ns)'
+set key top right
+
+set xrange [-1:65]
+
+set mytics 4
+set mxtics 10
+set grid ytics mytics xtics mxtics
+set offsets graph 0, 0, 0.01, 0.01
+
+set output out_file
+plot \
+     data_file in 0 u 4:17 w lp lw 2 t '64B Host offset', \
+     ''        in 1 u 5:17 w lp lw 2 t '64B Device offset', \
+     ''        in 2 u 4:17 w lp lw 2 t '407B Host offset', \
+     ''        in 3 u 5:17 w lp lw 2 t '407B Device offset', \
+     ''        in 4 u 4:17 w lp lw 2 t '416B Host offset', \
+     ''        in 5 u 5:17 w lp lw 2 t '416B Device offset', \
+     ''        in 6 u 4:17 w lp lw 2 t '1024B Host offset', \
+     ''        in 7 u 5:17 w lp lw 2 t '1024B Device offset', \
+     ''        in 8 u 4:17 w lp lw 2 t '2048B Host offset', \
+     ''        in 9 u 5:17 w lp lw 2 t '2048B Device offset'
+
+set output out_file_avg
+plot \
+     data_file in 0 u 4:16 w lp lw 2 t '64B Host offset', \
+     ''        in 1 u 5:16 w lp lw 2 t '64B Device offset', \
+     ''        in 2 u 4:16 w lp lw 2 t '407B Host offset', \
+     ''        in 3 u 5:16 w lp lw 2 t '407B Device offset', \
+     ''        in 4 u 4:16 w lp lw 2 t '416B Host offset', \
+     ''        in 5 u 5:16 w lp lw 2 t '416B Device offset', \
+     ''        in 6 u 4:16 w lp lw 2 t '1024B Host offset', \
+     ''        in 7 u 5:16 w lp lw 2 t '1024B Device offset', \
+     ''        in 8 u 4:16 w lp lw 2 t '2048B Host offset', \
+     ''        in 9 u 5:16 w lp lw 2 t '2048B Device offset'
+
+set output out_file_eb
+plot \
+     data_file in 0 u 4:17       w lp ls  1 lw 2 t '64B Host offset', \
+     ''        in 0 u 4:17:18:20 w ye ls  1 lw 2 t '', \
+     ''        in 1 u 5:17       w lp ls  2 lw 2 t '64B Device offset', \
+     ''        in 1 u 5:17:18:20 w ye ls  2 lw 2 t '', \
+     ''        in 2 u 4:17       w lp ls  3 lw 2 t '407B Host offset', \
+     ''        in 2 u 4:17:18:20 w ye ls  3 lw 2 t '', \
+     ''        in 3 u 5:17       w lp ls  4 lw 2 t '407B Device offset', \
+     ''        in 3 u 5:17:18:20 w ye ls  4 lw 2 t '', \
+     ''        in 4 u 4:17       w lp ls  5 lw 2 t '416B Host offset', \
+     ''        in 4 u 4:17:18:20 w ye ls  5 lw 2 t '', \
+     ''        in 5 u 5:17       w lp ls  6 lw 2 t '416B Device offset', \
+     ''        in 5 u 5:17:18:20 w ye ls  6 lw 2 t '', \
+     ''        in 6 u 4:17       w lp ls  7 lw 2 t '1024B Host offset', \
+     ''        in 6 u 4:17:18:20 w ye ls  7 lw 2 t '', \
+     ''        in 7 u 5:17       w lp ls  8 lw 2 t '1024B Device offset', \
+     ''        in 7 u 5:17:18:20 w ye ls  8 lw 2 t '', \
+     ''        in 8 u 4:17       w lp ls  9 lw 2 t '2048B Host offset', \
+     ''        in 8 u 4:17:18:20 w ye ls  9 lw 2 t '', \
+     ''        in 9 u 5:17       w lp ls 10 lw 2 t '2048B Device offset', \
+     ''        in 9 u 5:17:18:20 w ye ls 10 lw 2 t ''
